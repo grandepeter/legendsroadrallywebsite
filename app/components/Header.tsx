@@ -17,7 +17,7 @@ export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--legends-dark-green)] shadow-lg border-b-2 border-[var(--legends-gold)]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)] shadow-lg border-b-2 border-[var(--legends-gold)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Title */}
@@ -43,7 +43,7 @@ export default function Header() {
             </a>
             <a
               href="#reserve"
-              className="bg-[var(--legends-gold)] text-[var(--legends-dark-green)] px-4 py-2 rounded-lg font-bold hover:bg-[var(--legends-cream)] transition-colors duration-200"
+              className="bg-[var(--legends-gold)] text-[var(--legends-dark-black)] px-4 py-2 rounded-lg font-bold hover:bg-[var(--legends-cream)] transition-colors duration-200"
             >
               Reserve Your Spot Now
             </a>
@@ -85,11 +85,11 @@ export default function Header() {
 
         {/* Mobile Dropdown Menu */}
         {isDropdownOpen && (
-          <div className="md:hidden bg-[var(--legends-forest-green)] border-t border-[var(--legends-gold)] py-4">
+          <div className="md:hidden bg-gradient-to-r from-[var(--legends-black)] to-[var(--legends-light-black)] border-t border-[var(--legends-gold)] py-4">
             <nav className="flex flex-col space-y-3">
               <a
                 href="#about"
-                className="text-[var(--Legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium py-2"
+                className="text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium py-2"
                 onClick={() => setIsDropdownOpen(false)}
               >
                 About
@@ -103,7 +103,7 @@ export default function Header() {
               </a>
               <a
                 href="#reserve"
-                className="bg-[var(--legends-gold)] text-[var(--legends-dark-green)] px-4 py-2 rounded-lg font-bold hover:bg-[var(--legends-cream)] transition-colors duration-200 text-center mx-4"
+                className="bg-[var(--legends-gold)] text-[var(--legends-dark-black)] px-4 py-2 rounded-lg font-bold hover:bg-[var(--legends-cream)] transition-colors duration-200 text-center mx-4"
                 onClick={() => setIsDropdownOpen(false)}
               >
                 Reserve Your Spot Now

@@ -78,12 +78,10 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   /* Custom Legends Road Rally Brand Colors */
-  --legends-forest-green: oklch(0.35 0.08 115); /* Dark forest green */
+  --legends-black: oklch(0.15 0 0); /* Soft black */
+  --legends-dark-black: oklch(0.08 0 0); /* Darker black for backgrounds */
   --legends-gold: oklch(0.8 0.15 85); /* Warm gold/yellow */
-  --legends-dark-green: oklch(
-    0.25 0.08 115
-  ); /* Even darker green for backgrounds */
-  --legends-light-green: oklch(0.45 0.08 115); /* Lighter green for accents */
+  --legends-light-black: oklch(0.25 0 0); /* Lighter gray-black for accents */
   --legends-cream: oklch(0.95 0.02 85); /* Off-white cream for text */
 }
 

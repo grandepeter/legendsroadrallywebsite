@@ -19,7 +19,7 @@ export default function Home() {
       {/* Add padding to compensate for fixed header */}
       <div className="pt-16">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-[var(--legends-dark-green)] to-[var(--legends-forest-green)] py-20 px-4">
+        <section className="bg-gradient-to-br from-black via-gray-900 to-gray-800 py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
               {/* Left side - Main Title and Description */}
@@ -42,7 +42,7 @@ export default function Home() {
                 <div className="flex justify-center lg:justify-start">
                   <a
                     href="#reserve"
-                    className="bg-[var(--legends-gold)] text-[var(--legends-dark-green)] px-8 py-4 rounded-xl font-bold text-xl hover:bg-[var(--legends-cream)] transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="bg-[var(--legends-gold)] text-[var(--legends-dark-black)] px-8 py-4 rounded-xl font-bold text-xl hover:bg-[var(--legends-cream)] transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     RESERVE YOUR SPOT NOW!
                   </a>
@@ -53,15 +53,15 @@ export default function Home() {
               <div className="flex-1 max-w-lg">
                 <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-2xl p-8 aspect-square flex items-center justify-center shadow-2xl">
                   <div className="text-center">
-                    <div className="w-24 h-24 mx-auto mb-4 bg-[var(--legends-dark-green)] rounded-full flex items-center justify-center">
+                    <div className="w-24 h-24 mx-auto mb-4 bg-[var(--legends-dark-black)] rounded-full flex items-center justify-center">
                       <span className="text-[var(--legends-gold)] text-4xl">
                         📸
                       </span>
                     </div>
-                    <p className="text-[var(--legends-dark-green)] font-semibold text-lg">
+                    <p className="text-[var(--legends-dark-black)] font-semibold text-lg">
                       Hero Image Placeholder
                     </p>
-                    <p className="text-[var(--legends-dark-green)] text-sm mt-2 opacity-75">
+                    <p className="text-[var(--legends-dark-black)] text-sm mt-2 opacity-75">
                       Temple climbing adventure photo
                     </p>
                   </div>
@@ -77,17 +77,17 @@ export default function Home() {
           className="py-16 px-4 bg-[var(--legends-cream)]"
         >
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-[var(--legends-dark-green)] mb-12 text-center font-mono">
+            <h2 className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono">
               NEXT TRIP DATES
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Tour 1 */}
               <div className="bg-white rounded-2xl p-8 shadow-xl border-4 border-[var(--legends-gold)]">
-                <h3 className="text-2xl font-bold text-[var(--legends-dark-green)] mb-4 font-mono">
+                <h3 className="text-2xl font-bold text-[var(--legends-dark-black)] mb-4 font-mono">
                   TOUR 1: JUNE 16-25, 2026
                 </h3>
-                <ul className="space-y-3 text-[var(--legends-dark-green)]">
+                <ul className="space-y-3 text-[var(--legends-dark-black)]">
                   <li className="flex items-center">
                     <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3"></span>
                     Ages 14-25
@@ -113,10 +113,10 @@ export default function Home() {
 
               {/* Tour 2 */}
               <div className="bg-white rounded-2xl p-8 shadow-xl border-4 border-[var(--legends-gold)]">
-                <h3 className="text-2xl font-bold text-[var(--legends-dark-green)] mb-4 font-mono">
+                <h3 className="text-2xl font-bold text-[var(--legends-dark-black)] mb-4 font-mono">
                   TOUR 2: JULY_7-16, 2026
                 </h3>
-                <ul className="space-y-3 text-[var(--legends-dark-green)]">
+                <ul className="space-y-3 text-[var(--legends-dark-black)]">
                   <li className="flex items-center">
                     <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3"></span>
                     Ages 14-25
@@ -146,7 +146,7 @@ export default function Home() {
         {/* About Section */}
         <section
           id="about"
-          className="py-16 px-4 bg-[var(--legends-forest-green)]"
+          className="py-16 px-4 bg-gradient-to-br from-[var(--legends-black)] via-[var(--legends-light-black)] to-[var(--legends-dark-black)]"
         >
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-[var(--legends-gold)] mb-12 text-center font-mono">
@@ -180,48 +180,48 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[var(--legends-gold)] rounded-xl p-6 aspect-square flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--legends-dark-green)] rounded-xl flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--legends-dark-black)] rounded-xl flex items-center justify-center">
                       <span className="text-[var(--legends-gold)] text-2xl">
                         🚗
                       </span>
                     </div>
-                    <p className="text-[var(--legends-dark-green)] font-semibold text-sm">
+                    <p className="text-[var(--legends-dark-black)] font-semibold text-sm">
                       Transportation
                     </p>
                   </div>
                 </div>
                 <div className="bg-[var(--legends-gold)] rounded-xl p-6 aspect-square flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--legends-dark-green)] rounded-xl flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--legends-dark-black)] rounded-xl flex items-center justify-center">
                       <span className="text-[var(--legends-gold)] text-2xl">
                         🏛️
                       </span>
                     </div>
-                    <p className="text-[var(--legends-dark-green)] font-semibold text-sm">
+                    <p className="text-[var(--legends-dark-black)] font-semibold text-sm">
                       Historical Sites
                     </p>
                   </div>
                 </div>
                 <div className="bg-[var(--legends-gold)] rounded-xl p-6 aspect-square flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--legends-dark-green)] rounded-xl flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--legends-dark-black)] rounded-xl flex items-center justify-center">
                       <span className="text-[var(--legends-gold)] text-2xl">
                         🌊
                       </span>
                     </div>
-                    <p className="text-[var(--legends-dark-green)] font-semibold text-sm">
+                    <p className="text-[var(--legends-dark-black)] font-semibold text-sm">
                       Niagara Falls
                     </p>
                   </div>
                 </div>
                 <div className="bg-[var(--legends-gold)] rounded-xl p-6 aspect-square flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--legends-dark-green)] rounded-xl flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--legends-dark-black)] rounded-xl flex items-center justify-center">
                       <span className="text-[var(--legends-gold)] text-2xl">
                         🌅
                       </span>
                     </div>
-                    <p className="text-[var(--legends-dark-green)] font-semibold text-sm">
+                    <p className="text-[var(--legends-dark-black)] font-semibold text-sm">
                       Scenic Views
                     </p>
                   </div>
@@ -234,7 +234,7 @@ export default function Home() {
         {/* What's Included Section */}
         <section className="py-16 px-4 bg-[var(--legends-cream)]">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-[var(--legends-dark-green)] mb-12 text-center font-mono">
+            <h2 className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono">
               WHAT&apos;S INCLUDED
             </h2>
 
@@ -242,84 +242,84 @@ export default function Home() {
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--legends-dark-green)] text-3xl">
+                    <span className="text-[var(--legends-dark-black)] text-3xl">
                       🚌
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-green)] mb-4">
+                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-4">
                     Transportation
                   </h3>
-                  <p className="text-[var(--legends-dark-green)]">
+                  <p className="text-[var(--legends-dark-black)]">
                     Comfortable vehicles for the entire journey
                   </p>
                 </div>
 
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--legends-dark-green)] text-3xl">
+                    <span className="text-[var(--legends-dark-black)] text-3xl">
                       🏠
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-green)] mb-4">
+                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-4">
                     Lodging
                   </h3>
-                  <p className="text-[var(--legends-dark-green)]">
+                  <p className="text-[var(--legends-dark-black)]">
                     Quality accommodations throughout the trip
                   </p>
                 </div>
 
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--legends-dark-green)] text-3xl">
+                    <span className="text-[var(--legends-dark-black)] text-3xl">
                       🍽️
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-green)] mb-4">
+                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-4">
                     All Meals & Snacks
                   </h3>
-                  <p className="text-[var(--legends-dark-green)]">
+                  <p className="text-[var(--legends-dark-black)]">
                     Delicious food to fuel your adventure
                   </p>
                 </div>
 
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--legends-dark-green)] text-3xl">
+                    <span className="text-[var(--legends-dark-black)] text-3xl">
                       👥
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-green)] mb-4">
+                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-4">
                     Experienced Guides
                   </h3>
-                  <p className="text-[var(--legends-dark-green)]">
+                  <p className="text-[var(--legends-dark-black)]">
                     Knowledgeable leaders passionate about the journey
                   </p>
                 </div>
 
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--legends-dark-green)] text-3xl">
+                    <span className="text-[var(--legends-dark-black)] text-3xl">
                       👕
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-green)] mb-4">
+                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-4">
                     T-Shirts
                   </h3>
-                  <p className="text-[var(--legends-dark-green)]">
+                  <p className="text-[var(--legends-dark-black)]">
                     Commemorative gear to remember your trip
                   </p>
                 </div>
 
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--legends-dark-green)] text-3xl">
+                    <span className="text-[var(--legends-dark-black)] text-3xl">
                       🎉
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-green)] mb-4">
+                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-4">
                     Plenty of Entertainment
                   </h3>
-                  <p className="text-[var(--legends-dark-green)]">
+                  <p className="text-[var(--legends-dark-black)]">
                     Fun activities and games throughout
                   </p>
                 </div>
@@ -331,7 +331,7 @@ export default function Home() {
         {/* Pricing Section */}
         <section
           id="reserve"
-          className="py-16 px-4 bg-[var(--legends-dark-green)]"
+          className="py-16 px-4 bg-gradient-to-r from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)]"
         >
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-[var(--legends-gold)] mb-8 font-mono">
@@ -357,7 +357,7 @@ export default function Home() {
 
               <a
                 href="#contact"
-                className="inline-block bg-[var(--legends-gold)] text-[var(--legends-dark-green)] px-10 py-5 rounded-xl font-bold text-xl hover:bg-[var(--legends-cream)] transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="inline-block bg-[var(--legends-gold)] text-[var(--legends-dark-black)] px-10 py-5 rounded-xl font-bold text-xl hover:bg-[var(--legends-cream)] transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 GET STARTED TODAY
               </a>
@@ -368,7 +368,7 @@ export default function Home() {
         {/* Swag Section */}
         <section
           id="swag"
-          className="py-16 px-4 bg-[var(--legends-forest-green)]"
+          className="py-16 px-4 bg-gradient-to-r from-[var(--legends-light-black)] to-[var(--legends-black)]"
         >
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-[var(--legends-gold)] mb-12 text-center font-mono">
@@ -379,15 +379,15 @@ export default function Home() {
               <div className="bg-black rounded-2xl p-8 shadow-2xl max-w-md">
                 <div className="bg-[var(--legends-gold)] rounded-xl p-6 aspect-[4/5] flex flex-col items-center justify-center">
                   <div className="text-center">
-                    <div className="w-24 h-24 mx-auto mb-4 bg-[var(--legends-dark-green)] rounded-full flex items-center justify-center">
+                    <div className="w-24 h-24 mx-auto mb-4 bg-[var(--legends-dark-black)] rounded-full flex items-center justify-center">
                       <span className="text-[var(--legends-gold)] text-3xl">
                         👕
                       </span>
                     </div>
-                    <p className="text-[var(--legends-dark-green)] font-bold text-xl mb-2">
+                    <p className="text-[var(--legends-dark-black)] font-bold text-xl mb-2">
                       LEGENDS ROAD RALLY
                     </p>
-                    <p className="text-[var(--legends-dark-green)] text-sm mt-2 opacity-75">
+                    <p className="text-[var(--legends-dark-black)] text-sm mt-2 opacity-75">
                       &ldquo;FROM NIAGARA TO NAUVOO, FULL SEND.&rdquo;
                     </p>
                   </div>
@@ -403,17 +403,17 @@ export default function Home() {
         {/* Contact Section */}
         <section id="contact" className="py-16 px-4 bg-[var(--legends-cream)]">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-[var(--legends-dark-green)] mb-12 text-center font-mono">
+            <h2 className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono">
               CONTACT US
             </h2>
 
             <div className="bg-white rounded-2xl p-10 shadow-xl mx-4">
               <div className="grid md:grid-cols-2 gap-12">
                 <div>
-                  <h3 className="text-2xl font-bold text-[var(--legends-dark-green)] mb-6">
+                  <h3 className="text-2xl font-bold text-[var(--legends-dark-black)] mb-6">
                     Get In Touch
                   </h3>
-                  <p className="text-[var(--legends-dark-green)] mb-6 text-lg leading-relaxed">
+                  <p className="text-[var(--legends-dark-black)] mb-6 text-lg leading-relaxed">
                     Ready to embark on the adventure of a lifetime? Contact us
                     to reserve your spot or ask any questions about our upcoming
                     trips.
@@ -422,33 +422,33 @@ export default function Home() {
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <span className="w-8 h-8 bg-[var(--legends-gold)] rounded-full flex items-center justify-center mr-4">
-                        <span className="text-[var(--legends-dark-green)] text-sm">
+                        <span className="text-[var(--legends-dark-black)] text-sm">
                           📧
                         </span>
                       </span>
-                      <span className="text-[var(--legends-dark-green)] font-semibold">
+                      <span className="text-[var(--legends-dark-black)] font-semibold">
                         mdaynes@beechwoodstrategy.com
                       </span>
                     </div>
 
                     <div className="flex items-center">
                       <span className="w-8 h-8 bg-[var(--legends-gold)] rounded-full flex items-center justify-center mr-4">
-                        <span className="text-[var(--legends-dark-green)] text-sm">
+                        <span className="text-[var(--legends-dark-black)] text-sm">
                           📞
                         </span>
                       </span>
-                      <span className="text-[var(--legends-dark-green)] font-semibold">
+                      <span className="text-[var(--legends-dark-black)] font-semibold">
                         +1-703-624-1947
                       </span>
                     </div>
 
                     <div className="flex items-center">
                       <span className="w-8 h-8 bg-[var(--legends-gold)] rounded-full flex items-center justify-center mr-4">
-                        <span className="text-[var(--legends-dark-green)] text-sm">
+                        <span className="text-[var(--legends-dark-black)] text-sm">
                           🏢
                         </span>
                       </span>
-                      <span className="text-[var(--legends-dark-green)] font-semibold">
+                      <span className="text-[var(--legends-dark-black)] font-semibold">
                         Legends Road LLC
                       </span>
                     </div>
@@ -457,15 +457,15 @@ export default function Home() {
 
                 <div className="bg-[var(--legends-gold)] rounded-xl p-6 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-24 h-24 mx-auto mb-4 bg-[var(--legends-dark-green)] rounded-full flex items-center justify-center">
+                    <div className="w-24 h-24 mx-auto mb-4 bg-[var(--legends-dark-black)] rounded-full flex items-center justify-center">
                       <span className="text-[var(--legends-gold)] text-4xl">
                         💬
                       </span>
                     </div>
-                    <p className="text-[var(--legends-dark-green)] font-bold text-lg mb-2">
+                    <p className="text-[var(--legends-dark-black)] font-bold text-lg mb-2">
                       Ready to Contact Us?
                     </p>
-                    <p className="text-[var(--legends-dark-green)] text-sm opacity-75">
+                    <p className="text-[var(--legends-dark-black)] text-sm opacity-75">
                       Send us an email or give us a call today!
                     </p>
                   </div>
@@ -476,7 +476,10 @@ export default function Home() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="py-16 px-4 bg-[var(--legends-dark-green)]">
+        <section
+          id="faq"
+          className="py-16 px-4 bg-gradient-to-br from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)]"
+        >
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-[var(--legends-gold)] mb-12 text-center font-mono">
               FREQUENTLY ASKED QUESTIONS
@@ -485,30 +488,30 @@ export default function Home() {
             <div className="bg-white rounded-2xl p-10 shadow-xl mx-4">
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-green)] mb-3">
+                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-3">
                     What age group can participate?
                   </h3>
-                  <p className="text-[var(--legends-dark-green)]">
+                  <p className="text-[var(--legends-dark-black)]">
                     Our trips are designed for youth ages 14-25 who are members
                     of The Church of Jesus Christ of Latter-day Saints.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-green)] mb-3">
+                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-3">
                     How many people are in each group?
                   </h3>
-                  <p className="text-[var(--legends-dark-green)]">
+                  <p className="text-[var(--legends-dark-black)]">
                     Each group consists of 21 participants, ensuring personal
                     attention and meaningful connections throughout the journey.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-green)] mb-3">
+                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-3">
                     What is included in the tour price?
                   </h3>
-                  <p className="text-[var(--legends-dark-green)]">
+                  <p className="text-[var(--legends-dark-black)]">
                     The $1,875 price includes transportation, lodging, all meals
                     and snacks, experienced guides, t-shirts, and entertainment.
                     Airfare to Buffalo, NY and from Kansas City is not included.
@@ -516,10 +519,10 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-green)] mb-3">
+                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-3">
                     How do I reserve my spot?
                   </h3>
-                  <p className="text-[var(--legends-dark-green)]">
+                  <p className="text-[var(--legends-dark-black)]">
                     Contact us at mdaynes@beechwoodstrategy.com or call
                     +1-703-624-1947 to secure your place with a $100
                     non-refundable deposit.
@@ -527,10 +530,10 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-green)] mb-3">
+                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-3">
                     Is the tour first-come, first-served?
                   </h3>
-                  <p className="text-[var(--legends-dark-green)]">
+                  <p className="text-[var(--legends-dark-black)]">
                     Yes, spots are reserved on a first-come, first-served basis.
                     We recommend booking early to secure your preferred tour
                     dates.
@@ -542,7 +545,7 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="py-8 px-4 bg-[var(--legends-dark-green)] border-t-2 border-[var(--legends-gold)]">
+        <footer className="py-8 px-4 bg-gradient-to-t from-[var(--legends-dark-black)] to-[var(--legends-black)] border-t-2 border-[var(--legends-gold)]">
           <div className="max-w-7xl mx-auto text-center">
             <div className="mb-4">
               <h3 className="text-xl font-bold text-[var(--legends-gold)] font-mono">
