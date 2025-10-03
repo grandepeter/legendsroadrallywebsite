@@ -8,6 +8,7 @@
  * experience focused on church history and adventure.
  */
 
+import Image from "next/image";
 import Header from "./components/Header";
 
 export default function Home() {
@@ -24,10 +25,16 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
               {/* Left side - Main Title and Description */}
               <div className="flex-1 text-center lg:text-left">
-                <h1 className="text-5xl lg:text-7xl font-bold text-[var(--legends-gold)] mb-6 font-mono tracking-wider">
-                  LEGENDS ROAD RALLY
-                </h1>
-                <p className="text-2xl lg:text-3xl font-semibold text-[var(--legends-cream)] mb-8 leading-relaxed">
+                <div className="flex justify-center lg:justify-start mb-4 -ml-4 lg:-ml-6">
+                  <Image
+                    src="/legendsroadrallylogo.PNG"
+                    alt="Legends Road Rally Logo"
+                    width={500}
+                    height={500}
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-2xl lg:text-3xl font-semibold text-[var(--legends-gold)] mb-6 leading-relaxed">
                   10-DAY, 9-NIGHT ADVENTURE <br />
                   THAT WILL CHANGE YOUR LIFE!
                 </p>

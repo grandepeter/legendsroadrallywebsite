@@ -10,6 +10,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 
 export default function Header() {
@@ -21,7 +22,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Title */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/legendsroadrallylogo.PNG"
+              alt="Legends Road Rally Logo"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
             <h1 className="text-xl font-bold text-[var(--legends-gold)] font-mono">
               LEGENDS ROAD RALLY
             </h1>
