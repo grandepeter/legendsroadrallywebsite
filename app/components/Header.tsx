@@ -2,7 +2,7 @@
  * Header Component for Legends Road Rally Website
  *
  * This component provides a fixed navigation header that appears at the top of all pages.
- * It includes a dropdown menu with all main navigation links and uses the brand's
+ * It includes a dropdown menu with all main navigation links and uses the brand&apos;s
  * forest green background with gold accents. The header stays fixed when scrolling
  * for easy access to navigation from anywhere on the page.
  */

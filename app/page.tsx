@@ -158,15 +158,15 @@ export default function Home() {
                 <p className="text-xl mb-6 leading-relaxed">
                   Experience the adventure of a lifetime as you trace the
                   footsteps of pioneers and early Saints across America. This
-                  isn't just a road trip— it's a transformative journey that
-                  will strengthen your faith, build lasting friendships, and
-                  create memories that will last forever.
+                  isn&apos;t just a road trip— it&apos;s a transformative
+                  journey that will strengthen your faith, build lasting
+                  friendships, and create memories that will last forever.
                 </p>
                 <p className="text-lg mb-6 leading-relaxed opacity-90">
                   Each day brings new discoveries, from the natural wonder of
                   Niagara Falls to the sacred sites where our church was
                   restored. Travel with your peers in comfortable vehicles, stay
-                  in quality accommodations, and experience America's rich
+                  in quality accommodations, and experience America&apos;s rich
                   history firsthand.
                 </p>
                 <p className="text-lg mb-6 leading-relaxed opacity-90">
@@ -235,7 +235,7 @@ export default function Home() {
         <section className="py-16 px-4 bg-[var(--legends-cream)]">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-[var(--legends-dark-green)] mb-12 text-center font-mono">
-              WHAT'S INCLUDED
+              WHAT&apos;S INCLUDED
             </h2>
 
             <div className="bg-white rounded-2xl p-10 shadow-xl mx-4">
