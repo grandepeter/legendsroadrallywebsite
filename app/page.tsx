@@ -388,7 +388,7 @@ export default function Home() {
                       LEGENDS ROAD RALLY
                     </p>
                     <p className="text-[var(--legends-dark-green)] text-sm mt-2 opacity-75">
-                      "FROM NIAGARA TO NAUVOO, FULL SEND."
+                      &ldquo;FROM NIAGARA TO NAUVOO, FULL SEND.&rdquo;
                     </p>
                   </div>
                 </div>
