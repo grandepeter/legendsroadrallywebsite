@@ -10,6 +10,7 @@
 
 import Image from "next/image";
 import Header from "./components/Header";
+import HeroCarousel from "./components/HeroCarousel";
 
 export default function Home() {
   return (
@@ -27,8 +28,8 @@ export default function Home() {
               <div className="flex-1 text-center lg:text-left">
                 <div className="flex justify-center lg:justify-start mb-4 -ml-4 lg:-ml-6">
                   <Image
-                    src="/legendsroadrallylogo.PNG"
-                    alt="Legends Road Rally Logo"
+                    src="/legendsroadlogo.PNG"
+                    alt="Legends Road Logo"
                     width={500}
                     height={500}
                     className="object-contain"
@@ -56,23 +57,11 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right side - Hero Image Placeholder */}
+              {/* Right side - Hero Image Carousel */}
               <div className="flex-1 max-w-lg">
-                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-2xl p-8 aspect-square flex items-center justify-center shadow-2xl">
-                  <div className="text-center">
-                    <div className="w-24 h-24 mx-auto mb-4 bg-[var(--legends-dark-black)] rounded-full flex items-center justify-center">
-                      <span className="text-[var(--legends-gold)] text-4xl">
-                        📸
-                      </span>
-                    </div>
-                    <p className="text-[var(--legends-dark-black)] font-semibold text-lg">
-                      Hero Image Placeholder
-                    </p>
-                    <p className="text-[var(--legends-dark-black)] text-sm mt-2 opacity-75">
-                      Temple climbing adventure photo
-                    </p>
-                  </div>
-                </div>
+                <HeroCarousel
+                  images={["/niagara1.jpg", "/niagara2.jpg", "/niagara3.jpg"]}
+                />
               </div>
             </div>
           </div>

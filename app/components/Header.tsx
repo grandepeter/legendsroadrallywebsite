@@ -24,8 +24,8 @@ export default function Header() {
           {/* Logo/Title */}
           <div className="flex items-center gap-3">
             <Image
-              src="/legendsroadrallylogo.PNG"
-              alt="Legends Road Rally Logo"
+              src="/legendsroadlogo.PNG"
+              alt="Legends Road Logo"
               width={40}
               height={40}
               className="object-contain"
