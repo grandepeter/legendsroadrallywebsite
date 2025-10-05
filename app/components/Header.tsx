@@ -11,7 +11,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { Menu as MenuIcon, X as CloseIcon } from "lucide-react";
 
 export default function Header() {
   // State to track if dropdown menu is open
@@ -26,12 +26,12 @@ export default function Header() {
             <Image
               src="/legendsroadlogo.PNG"
               alt="Legends Road Logo"
-              width={26}
-              height={26}
+              width={48}
+              height={48}
               className="object-contain"
             />
             <h1
-              className="text-xl font-bold text-[var(--legends-gold)] font-mono [font-variation-settings:normal]"
+              className="text-[1.79rem] leading-none font-bold text-[var(--legends-gold)] font-mono [font-variation-settings:normal] inline-block translate-y-[2px]"
               style={{
                 fontFamily:
                   "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
@@ -81,14 +81,14 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center space-x-2 text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200"
+              aria-label={isDropdownOpen ? "Close menu" : "Open menu"}
+              className="flex items-center justify-center w-10 h-10 text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200"
             >
-              <span className="font-medium">Menu</span>
-              <ChevronDown
-                className={`w-4 h-4 transition-transform duration-200 ${
-                  isDropdownOpen ? "rotate-180" : ""
-                }`}
-              />
+              {isDropdownOpen ? (
+                <CloseIcon className="w-6 h-6" />
+              ) : (
+                <MenuIcon className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
