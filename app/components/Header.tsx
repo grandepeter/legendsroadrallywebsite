@@ -26,11 +26,17 @@ export default function Header() {
             <Image
               src="/legendsroadlogo.PNG"
               alt="Legends Road Logo"
-              width={40}
-              height={40}
+              width={26}
+              height={26}
               className="object-contain"
             />
-            <h1 className="text-xl font-bold text-[var(--legends-gold)] font-mono">
+            <h1
+              className="text-xl font-bold text-[var(--legends-gold)] font-mono [font-variation-settings:normal]"
+              style={{
+                fontFamily:
+                  "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
+              }}
+            >
               LEGENDS ROAD LLC
             </h1>
           </div>
@@ -56,12 +62,7 @@ export default function Header() {
             >
               Next Trip Dates
             </a>
-            <a
-              href="#swag"
-              className="inline-flex items-center h-10 px-2 text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium"
-            >
-              Buy Swag
-            </a>
+
             <a
               href="#faq"
               className="inline-flex items-center h-10 px-2 text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium"
@@ -118,13 +119,7 @@ export default function Header() {
               >
                 Next Trip Dates
               </a>
-              <a
-                href="#swag"
-                className="text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium py-2"
-                onClick={() => setIsDropdownOpen(false)}
-              >
-                Buy Swag
-              </a>
+
               <a
                 href="#faq"
                 className="text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium py-2"

@@ -19,27 +19,33 @@ export default function Home() {
       <Header />
 
       {/* Add padding to compensate for fixed header */}
-      <div className="pt-16">
+      <div className="pt-8">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-black via-gray-900 to-gray-800 py-20 px-4">
+        <section className="bg-gradient-to-br from-black via-gray-900 to-gray-800 pt-12 pb-24 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-20">
               {/* Left side - Main Title and Description */}
-              <div className="flex-1 text-center lg:text-left">
-                <div className="flex justify-center lg:justify-start mb-4 -ml-4 lg:-ml-6">
+              <div className="flex-1 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
+                <div className="flex justify-center lg:justify-start mb-6">
                   <Image
                     src="/legendsroadlogo.PNG"
                     alt="Legends Road Logo"
-                    width={500}
-                    height={500}
+                    width={330}
+                    height={330}
                     className="object-contain"
                   />
                 </div>
-                <p className="text-2xl lg:text-3xl font-semibold text-[var(--legends-gold)] mb-6 leading-relaxed">
+                <p
+                  className="text-4xl lg:text-6xl font-bold text-[var(--legends-gold)] mb-6 leading-tight"
+                  style={{
+                    fontFamily:
+                      "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
+                  }}
+                >
                   10-DAY, 9-NIGHT ADVENTURE <br />
                   THAT WILL CHANGE YOUR LIFE!
                 </p>
-                <p className="text-lg text-[var(--legends-cream)] mb-8 opacity-90 leading-relaxed">
+                <p className="text-lg text-[var(--legends-cream)] mb-8 opacity-90 leading-relaxed max-w-xl mx-auto lg:mx-0">
                   From Niagara Falls to Sacred Grove, Kirtland Temple, Chicago,
                   Nauvoo, Carthage & Liberty Jail. Discover the stories of early
                   Saints and pioneers as you embark on an unforgettable journey
@@ -58,7 +64,7 @@ export default function Home() {
               </div>
 
               {/* Right side - Hero Image Carousel */}
-              <div className="flex-1 max-w-lg">
+              <div className="flex-1 max-w-xl mx-auto lg:mx-0 w-full">
                 <HeroCarousel
                   images={["/niagara1.jpg", "/niagara2.jpg", "/niagara3.jpg"]}
                 />
@@ -73,7 +79,13 @@ export default function Home() {
           className="py-16 px-4 bg-[var(--legends-cream)]"
         >
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono">
+            <h2
+              className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono"
+              style={{
+                fontFamily:
+                  "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
+              }}
+            >
               NEXT TRIP DATES
             </h2>
 
@@ -136,6 +148,77 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+
+            {/* Tour Schedule - Detailed daily plan without numeric list markers */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl border-4 border-[var(--legends-gold)]">
+              <h3 className="text-2xl font-bold text-[var(--legends-dark-black)] mb-6 font-mono">
+                TOUR SCHEDULE
+              </h3>
+              <ul className="space-y-3 text-[var(--legends-dark-black)]">
+                <li className="flex items-start">
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span>Day 1 – Arrive Buffalo, NY, Niagara Falls</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span>
+                    Day 2 – Sacred Grove, Hill Cumorah, Grandin Building,
+                    Whitmer Farm
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span>
+                    Day 3 – Harmony, PA (Susquehanna) Priesthood Restoration
+                    Site
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span>
+                    Day 4 – Kirtland, OH, Whitney Store, Kirtland Temple, Hiram
+                    OH: John Johnson Farm
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span>
+                    Day 5 – Notre Dame University, City of Chicago sites (MLB
+                    Game schedule pending)
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span>Day 6 – Travel to Nauvoo, IL</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span>
+                    Day 7 – Nauvoo House, Nauvoo Temple, Historic Nauvoo
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span>
+                    Day 8 – Carthage Jail, Hawn’s Mill, Adam-ondi-Ahman, Far
+                    West Temple Site
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span>
+                    Day 9 – Kansas City Temple, Independence Visitor Center,
+                    Liberty Jail, World’s best Barbeque
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span>
+                    Day 10 – Closing Ceremonies/Party – Depart Kansas City
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -145,7 +228,13 @@ export default function Home() {
           className="py-16 px-4 bg-gradient-to-br from-[var(--legends-black)] via-[var(--legends-light-black)] to-[var(--legends-dark-black)]"
         >
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-[var(--legends-gold)] mb-12 text-center font-mono">
+            <h2
+              className="text-4xl font-bold text-[var(--legends-gold)] mb-12 text-center font-mono"
+              style={{
+                fontFamily:
+                  "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
+              }}
+            >
               ABOUT THE EXPERIENCE
             </h2>
 
@@ -230,7 +319,13 @@ export default function Home() {
         {/* What's Included Section */}
         <section className="py-16 px-4 bg-[var(--legends-cream)]">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono">
+            <h2
+              className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono"
+              style={{
+                fontFamily:
+                  "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
+              }}
+            >
               WHAT&apos;S INCLUDED
             </h2>
 
@@ -330,7 +425,13 @@ export default function Home() {
           className="py-16 px-4 bg-gradient-to-r from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)]"
         >
           <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-[var(--legends-gold)] mb-8 font-mono">
+            <h2
+              className="text-4xl font-bold text-[var(--legends-gold)] mb-8 font-mono"
+              style={{
+                fontFamily:
+                  "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
+              }}
+            >
               PRICE
             </h2>
 
@@ -361,45 +462,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Swag Section */}
-        <section
-          id="swag"
-          className="py-16 px-4 bg-gradient-to-r from-[var(--legends-light-black)] to-[var(--legends-black)]"
-        >
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-[var(--legends-gold)] mb-12 text-center font-mono">
-              BUY SWAG
-            </h2>
-
-            <div className="flex justify-center">
-              <div className="bg-black rounded-2xl p-8 shadow-2xl max-w-md">
-                <div className="bg-[var(--legends-gold)] rounded-xl p-6 aspect-[4/5] flex flex-col items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 mx-auto mb-4 bg-[var(--legends-dark-black)] rounded-full flex items-center justify-center">
-                      <span className="text-[var(--legends-gold)] text-3xl">
-                        👕
-                      </span>
-                    </div>
-                    <p className="text-[var(--legends-dark-black)] font-bold text-xl mb-2">
-                      LEGENDS ROAD RALLY
-                    </p>
-                    <p className="text-[var(--legends-dark-black)] text-sm mt-2 opacity-75">
-                      &ldquo;FROM NIAGARA TO NAUVOO, FULL SEND.&rdquo;
-                    </p>
-                  </div>
-                </div>
-                <p className="text-[var(--legends-cream)] text-center mt-4">
-                  Official Tournament T-Shirt
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Contact Section */}
         <section id="contact" className="py-16 px-4 bg-[var(--legends-cream)]">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono">
+            <h2
+              className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono"
+              style={{
+                fontFamily:
+                  "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
+              }}
+            >
               CONTACT US
             </h2>
 
@@ -477,7 +549,13 @@ export default function Home() {
           className="py-16 px-4 bg-gradient-to-br from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)]"
         >
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-[var(--legends-gold)] mb-12 text-center font-mono">
+            <h2
+              className="text-4xl font-bold text-[var(--legends-gold)] mb-12 text-center font-mono"
+              style={{
+                fontFamily:
+                  "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
+              }}
+            >
               FREQUENTLY ASKED QUESTIONS
             </h2>
 
