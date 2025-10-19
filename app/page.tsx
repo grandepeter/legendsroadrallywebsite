@@ -540,10 +540,14 @@ export default function Home() {
 
                 <div className="bg-[var(--legends-gold)] rounded-xl p-6 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-24 h-24 mx-auto mb-4 bg-[var(--legends-dark-black)] rounded-full flex items-center justify-center">
-                      <span className="text-[var(--legends-gold)] text-4xl">
-                        💬
-                      </span>
+                    <div className="w-20 h-20 mx-auto mb-4 bg-[var(--legends-dark-black)] rounded-full flex items-center justify-center p-2">
+                      <Image
+                        src="/legendsroadlogo.PNG"
+                        alt="Legends Road Logo"
+                        width={100}
+                        height={100}
+                        className="object-contain"
+                      />
                     </div>
                     <p className="text-[var(--legends-dark-black)] font-bold text-lg mb-2">
                       Ready to Contact Us?
