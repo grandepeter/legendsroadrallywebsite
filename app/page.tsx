@@ -23,51 +23,78 @@ export default function Home() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-black via-gray-900 to-gray-800 pt-12 pb-24 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-20">
-              {/* Left side - Main Title and Description */}
-              <div className="flex-1 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
-                <div className="flex justify-center lg:justify-start mb-6">
-                  <Image
-                    src="/legendsroadlogo.PNG"
-                    alt="Legends Road Logo"
-                    width={330}
-                    height={330}
-                    className="object-contain"
+            {/* Full-width title at top */}
+            <div className="text-center mb-16">
+              <h1
+                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-6 leading-none"
+                style={{
+                  fontFamily:
+                    "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
+                }}
+              >
+                LEGENDS ROAD RALLY
+              </h1>
+            </div>
+
+            {/* Two-column layout below */}
+            <div className="flex justify-center">
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] items-center gap-8 lg:gap-6 max-w-7xl">
+                {/* Left side - Main Title and Description */}
+                <div className="text-center lg:text-left lg:pr-8">
+                  <p
+                    className="text-3xl lg:text-6xl font-bold text-[var(--legends-gold)] mb-6 leading-tight"
+                    style={{
+                      fontFamily:
+                        "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
+                    }}
+                  >
+                    10-DAY, 9-NIGHT ADVENTURE
+                    <br />
+                    THAT WILL CHANGE
+                    <br />
+                    YOUR LIFE!
+                  </p>
+                  <p className="text-lg text-[var(--legends-cream)] mb-8 opacity-90 leading-relaxed">
+                    From Niagara Falls to Sacred Grove, Kirtland Temple,
+                    Chicago,
+                    <br />
+                    Nauvoo, Carthage & Liberty Jail. Discover the stories of
+                    early
+                    <br />
+                    Saints and pioneers as you embark on an unforgettable
+                    journey
+                    <br />
+                    across America with your peers.
+                  </p>
+
+                  {/* CTA Button */}
+                  <div className="flex justify-center lg:justify-start">
+                    <a
+                      href="#reserve"
+                      className="bg-[var(--legends-gold)] text-[var(--legends-dark-black)] px-8 py-4 rounded-xl font-bold text-xl hover:bg-[var(--legends-cream)] transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    >
+                      RESERVE YOUR SPOT NOW!
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right side - Smaller Hero Image Carousel */}
+                <div className="max-w-3xl mx-auto lg:mx-0 w-full lg:pl-4">
+                  <HeroCarousel
+                    images={[
+                      "/Legends Top 10/IMG_8420.jpg",
+                      "/Legends Top 10/20250711_121806.jpg",
+                      "/Legends Top 10/20250711_222045.jpg",
+                      "/Legends Top 10/20250712_130022.jpg",
+                      "/Legends Top 10/20250715_110605.jpg",
+                      "/Legends Top 10/IMG_8421.jpg",
+                      "/Legends Top 10/IMG_3479.JPG",
+                      "/Legends Top 10/IMG_8418.jpg",
+                      "/Legends Top 10/20250711_205955.jpg",
+                      "/Legends Top 10/IMG_8419.jpg",
+                    ]}
                   />
                 </div>
-                <p
-                  className="text-4xl lg:text-6xl font-bold text-[var(--legends-gold)] mb-6 leading-tight"
-                  style={{
-                    fontFamily:
-                      "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
-                  }}
-                >
-                  10-DAY, 9-NIGHT ADVENTURE <br />
-                  THAT WILL CHANGE YOUR LIFE!
-                </p>
-                <p className="text-lg text-[var(--legends-cream)] mb-8 opacity-90 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  From Niagara Falls to Sacred Grove, Kirtland Temple, Chicago,
-                  Nauvoo, Carthage & Liberty Jail. Discover the stories of early
-                  Saints and pioneers as you embark on an unforgettable journey
-                  across America with your peers.
-                </p>
-
-                {/* CTA Button */}
-                <div className="flex justify-center lg:justify-start">
-                  <a
-                    href="#reserve"
-                    className="bg-[var(--legends-gold)] text-[var(--legends-dark-black)] px-8 py-4 rounded-xl font-bold text-xl hover:bg-[var(--legends-cream)] transition-all duration-300 transform hover:scale-105 shadow-lg"
-                  >
-                    RESERVE YOUR SPOT NOW!
-                  </a>
-                </div>
-              </div>
-
-              {/* Right side - Hero Image Carousel */}
-              <div className="flex-1 max-w-xl mx-auto lg:mx-0 w-full">
-                <HeroCarousel
-                  images={["/niagara1.jpg", "/niagara2.jpg", "/niagara3.jpg"]}
-                />
               </div>
             </div>
           </div>
@@ -621,6 +648,16 @@ export default function Home() {
         {/* Footer */}
         <footer className="py-8 px-4 bg-gradient-to-t from-[var(--legends-dark-black)] to-[var(--legends-black)] border-t-2 border-[var(--legends-gold)]">
           <div className="max-w-7xl mx-auto text-center">
+            {/* Logo */}
+            <div className="mb-6">
+              <Image
+                src="/legendsroadlogo.PNG"
+                alt="Legends Road Logo"
+                width={200}
+                height={200}
+                className="object-contain mx-auto"
+              />
+            </div>
             <div className="mb-4">
               <h3 className="text-xl font-bold text-[var(--legends-gold)] font-mono">
                 LEGENDS ROAD RALLY
