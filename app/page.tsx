@@ -288,55 +288,43 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Gallery Placeholder */}
+              {/* Gallery with actual photos */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-[var(--legends-gold)] rounded-xl p-6 aspect-square flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--legends-dark-black)] rounded-xl flex items-center justify-center">
-                      <span className="text-[var(--legends-gold)] text-2xl">
-                        🚗
-                      </span>
-                    </div>
-                    <p className="text-[var(--legends-dark-black)] font-semibold text-sm">
-                      Transportation
-                    </p>
-                  </div>
+                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square overflow-hidden">
+                  <Image
+                    src="/Legends Top 10/Picture26.png"
+                    alt="Legends Road Rally experience"
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
-                <div className="bg-[var(--legends-gold)] rounded-xl p-6 aspect-square flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--legends-dark-black)] rounded-xl flex items-center justify-center">
-                      <span className="text-[var(--legends-gold)] text-2xl">
-                        🏛️
-                      </span>
-                    </div>
-                    <p className="text-[var(--legends-dark-black)] font-semibold text-sm">
-                      Historical Sites
-                    </p>
-                  </div>
+                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square overflow-hidden">
+                  <Image
+                    src="/Legends Top 10/Picture5.png"
+                    alt="Legends Road Rally experience"
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
-                <div className="bg-[var(--legends-gold)] rounded-xl p-6 aspect-square flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--legends-dark-black)] rounded-xl flex items-center justify-center">
-                      <span className="text-[var(--legends-gold)] text-2xl">
-                        🌊
-                      </span>
-                    </div>
-                    <p className="text-[var(--legends-dark-black)] font-semibold text-sm">
-                      Niagara Falls
-                    </p>
-                  </div>
+                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square overflow-hidden">
+                  <Image
+                    src="/Legends Top 10/Picture22.png"
+                    alt="Legends Road Rally experience"
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
-                <div className="bg-[var(--legends-gold)] rounded-xl p-6 aspect-square flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--legends-dark-black)] rounded-xl flex items-center justify-center">
-                      <span className="text-[var(--legends-gold)] text-2xl">
-                        🌅
-                      </span>
-                    </div>
-                    <p className="text-[var(--legends-dark-black)] font-semibold text-sm">
-                      Scenic Views
-                    </p>
-                  </div>
+                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square overflow-hidden">
+                  <Image
+                    src="/Legends Top 10/Picture24.png"
+                    alt="Legends Road Rally experience"
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
               </div>
             </div>
@@ -522,7 +510,7 @@ export default function Home() {
                         </span>
                       </span>
                       <span className="text-[var(--legends-dark-black)] font-semibold">
-                        mdaynes@beechwoodstrategy.com
+                        info@legends-road.com
                       </span>
                     </div>
 
@@ -624,20 +612,19 @@ export default function Home() {
                     How do I reserve my spot?
                   </h3>
                   <p className="text-[var(--legends-dark-black)]">
-                    Contact us at mdaynes@beechwoodstrategy.com or call
-                    +1-703-624-1947 to secure your place with a $100
-                    non-refundable deposit.
+                    Contact us at info@legends-road.com or call +1-703-624-1947
+                    to secure your place with a $100 non-refundable deposit.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-3">
-                    Is the tour first-come, first-served?
+                    Are there any special opportunities or discounts available?
                   </h3>
                   <p className="text-[var(--legends-dark-black)]">
-                    Yes, spots are reserved on a first-come, first-served basis.
-                    We recommend booking early to secure your preferred tour
-                    dates.
+                    Discounts available for returned missionaries who are
+                    interested in helping as mentors. We have a few spots open
+                    for drivers (over the age of 25) if interested.
                   </p>
                 </div>
               </div>
@@ -667,7 +654,7 @@ export default function Home() {
               © 2025 Legends Road LLC. All rights reserved.
             </p>
             <div className="flex justify-center space-x-6 text-[var(--legends-cream)]">
-              <span>mdaynes@beechwoodstrategy.com</span>
+              <span>info@legends-road.com</span>
               <span>•</span>
               <span>+1-703-624-1947</span>
             </div>
