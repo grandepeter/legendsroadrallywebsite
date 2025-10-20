@@ -35,7 +35,7 @@ export default function Home() {
       {/* Add padding to compensate for fixed header */}
       <div className="pt-8">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-black via-gray-900 to-gray-800 pt-20 pb-24 px-4">
+        <section className="bg-gradient-to-br from-black via-gray-900 to-gray-800 pt-20 pb-12 sm:pb-24 px-4">
           <div className="max-w-7xl mx-auto">
             {/* Full-width title at top */}
             <div className="text-center mb-8">
@@ -70,15 +70,9 @@ export default function Home() {
                   </p>
                   <p className="text-lg text-[var(--legends-cream)] mb-8 opacity-90 leading-relaxed">
                     From Niagara Falls to Sacred Grove, Kirtland Temple,
-                    Chicago,
-                    <br />
-                    Nauvoo, Carthage & Liberty Jail. Discover the stories of
-                    early
-                    <br />
-                    Saints and pioneers as you embark on an unforgettable
-                    journey
-                    <br />
-                    across America with your peers.
+                    Chicago, Nauvoo, Carthage & Liberty Jail. Discover the
+                    stories of early Saints and pioneers as you embark on an
+                    unforgettable journey across America with your peers.
                   </p>
 
                   {/* CTA Button */}
