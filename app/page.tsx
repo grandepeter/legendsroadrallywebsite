@@ -457,6 +457,10 @@ export default function Home() {
               <div className="text-xl text-[var(--legends-cream)] opacity-80">
                 AIRFARE NOT INCLUDED
               </div>
+              <div className="text-2xl font-bold text-[var(--legends-gold)] mt-6">
+                $1,675 for returned missionaries who wish to help out as
+                mentors.
+              </div>
             </div>
 
             <div className="mb-12">
