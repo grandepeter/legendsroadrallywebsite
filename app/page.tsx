@@ -36,7 +36,7 @@ export default function Home() {
       <div className="pt-8">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-black via-gray-900 to-gray-800 pt-20 pb-12 sm:pb-24 px-4">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto sm:mx-4">
             {/* Full-width title at top */}
             <div className="text-center mb-8">
               <h1
@@ -113,7 +113,7 @@ export default function Home() {
           id="trip-dates"
           className="py-16 px-4 bg-[var(--legends-cream)]"
         >
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto sm:mx-4">
             <h2
               className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono"
               style={{
@@ -262,7 +262,7 @@ export default function Home() {
           id="about"
           className="py-16 px-4 bg-gradient-to-br from-[var(--legends-black)] via-[var(--legends-light-black)] to-[var(--legends-dark-black)]"
         >
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto sm:mx-4">
             <h2
               className="text-4xl font-bold text-[var(--legends-gold)] mb-12 text-center font-mono"
               style={{
