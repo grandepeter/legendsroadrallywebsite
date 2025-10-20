@@ -40,7 +40,7 @@ export default function Home() {
             {/* Full-width title at top */}
             <div className="text-center mb-8">
               <h1
-                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-6 leading-none"
+                className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-6 leading-none whitespace-nowrap"
                 style={{
                   fontFamily:
                     "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
