@@ -35,10 +35,10 @@ export default function Home() {
       {/* Add padding to compensate for fixed header */}
       <div className="pt-8">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-black via-gray-900 to-gray-800 pt-12 pb-24 px-4">
+        <section className="bg-gradient-to-br from-black via-gray-900 to-gray-800 pt-20 pb-24 px-4">
           <div className="max-w-7xl mx-auto">
             {/* Full-width title at top */}
-            <div className="text-center mb-16">
+            <div className="text-center mb-8">
               <h1
                 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-6 leading-none"
                 style={{
