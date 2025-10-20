@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * Legends Road Rally Landing Page
  *
@@ -9,10 +11,22 @@
  */
 
 import Image from "next/image";
+import { useState } from "react";
 import Header from "./components/Header";
 import HeroCarousel from "./components/HeroCarousel";
 
 export default function Home() {
+  // State to track which FAQ dropdown is currently open
+  // Only one dropdown can be open at a time (accordion behavior)
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  // Function to handle FAQ dropdown clicks
+  const toggleFaq = (index: number) => {
+    // If clicking the same FAQ that's already open, close it
+    // Otherwise, open the clicked FAQ and close any others
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Fixed Header Component */}
@@ -583,57 +597,147 @@ export default function Home() {
             </h2>
 
             <div className="bg-white rounded-2xl p-10 shadow-xl mx-4">
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-3">
-                    What age group can participate?
-                  </h3>
-                  <p className="text-[var(--legends-dark-black)]">
-                    Our trips are designed for youth ages 14-25 who are members
-                    of The Church of Jesus Christ of Latter-day Saints.
-                  </p>
+              <div className="space-y-4">
+                {/* FAQ Item 1 */}
+                <div className="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    onClick={() => toggleFaq(0)}
+                    className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex justify-between items-center"
+                  >
+                    <h3 className="text-xl font-bold text-[var(--legends-dark-black)]">
+                      What age group can participate?
+                    </h3>
+                    <span
+                      className={`text-xl font-bold transition-transform duration-200 ${
+                        openFaqIndex === 0 ? "rotate-90" : ""
+                      }`}
+                    >
+                      ›
+                    </span>
+                  </button>
+                  {openFaqIndex === 0 && (
+                    <div className="px-6 py-4 bg-white border-t border-gray-200">
+                      <p className="text-[var(--legends-dark-black)]">
+                        Our trips are designed for youth ages 14-25 who are
+                        members of The Church of Jesus Christ of Latter-day
+                        Saints.
+                      </p>
+                    </div>
+                  )}
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-3">
-                    How many people are in each group?
-                  </h3>
-                  <p className="text-[var(--legends-dark-black)]">
-                    Each group consists of 21 participants, ensuring personal
-                    attention and meaningful connections throughout the journey.
-                  </p>
+                {/* FAQ Item 2 */}
+                <div className="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    onClick={() => toggleFaq(1)}
+                    className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex justify-between items-center"
+                  >
+                    <h3 className="text-xl font-bold text-[var(--legends-dark-black)]">
+                      How many people are in each group?
+                    </h3>
+                    <span
+                      className={`text-xl font-bold transition-transform duration-200 ${
+                        openFaqIndex === 1 ? "rotate-90" : ""
+                      }`}
+                    >
+                      ›
+                    </span>
+                  </button>
+                  {openFaqIndex === 1 && (
+                    <div className="px-6 py-4 bg-white border-t border-gray-200">
+                      <p className="text-[var(--legends-dark-black)]">
+                        Each group consists of 21 participants, ensuring
+                        personal attention and meaningful connections throughout
+                        the journey.
+                      </p>
+                    </div>
+                  )}
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-3">
-                    What is included in the tour price?
-                  </h3>
-                  <p className="text-[var(--legends-dark-black)]">
-                    The $1,875 price includes transportation, lodging, all meals
-                    and snacks, experienced guides, t-shirts, and entertainment.
-                    Airfare to Buffalo, NY and from Kansas City is not included.
-                  </p>
+                {/* FAQ Item 3 */}
+                <div className="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    onClick={() => toggleFaq(2)}
+                    className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex justify-between items-center"
+                  >
+                    <h3 className="text-xl font-bold text-[var(--legends-dark-black)]">
+                      What is included in the tour price?
+                    </h3>
+                    <span
+                      className={`text-xl font-bold transition-transform duration-200 ${
+                        openFaqIndex === 2 ? "rotate-90" : ""
+                      }`}
+                    >
+                      ›
+                    </span>
+                  </button>
+                  {openFaqIndex === 2 && (
+                    <div className="px-6 py-4 bg-white border-t border-gray-200">
+                      <p className="text-[var(--legends-dark-black)]">
+                        The $1,875 price includes transportation, lodging, all
+                        meals and snacks, experienced guides, t-shirts, and
+                        entertainment. Airfare to Buffalo, NY and from Kansas
+                        City is not included.
+                      </p>
+                    </div>
+                  )}
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-3">
-                    How do I reserve my spot?
-                  </h3>
-                  <p className="text-[var(--legends-dark-black)]">
-                    Contact us at info@legends-road.com or call +1-703-624-1947
-                    to secure your place with a $100 non-refundable deposit.
-                  </p>
+                {/* FAQ Item 4 */}
+                <div className="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    onClick={() => toggleFaq(3)}
+                    className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex justify-between items-center"
+                  >
+                    <h3 className="text-xl font-bold text-[var(--legends-dark-black)]">
+                      How do I reserve my spot?
+                    </h3>
+                    <span
+                      className={`text-xl font-bold transition-transform duration-200 ${
+                        openFaqIndex === 3 ? "rotate-90" : ""
+                      }`}
+                    >
+                      ›
+                    </span>
+                  </button>
+                  {openFaqIndex === 3 && (
+                    <div className="px-6 py-4 bg-white border-t border-gray-200">
+                      <p className="text-[var(--legends-dark-black)]">
+                        Contact us at info@legends-road.com or call
+                        +1-703-624-1947 to secure your place with a $100
+                        non-refundable deposit.
+                      </p>
+                    </div>
+                  )}
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-3">
-                    Are there any special opportunities or discounts available?
-                  </h3>
-                  <p className="text-[var(--legends-dark-black)]">
-                    Discounts available for returned missionaries who are
-                    interested in helping as mentors. We have a few spots open
-                    for drivers (over the age of 25) if interested.
-                  </p>
+                {/* FAQ Item 5 */}
+                <div className="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    onClick={() => toggleFaq(4)}
+                    className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex justify-between items-center"
+                  >
+                    <h3 className="text-xl font-bold text-[var(--legends-dark-black)]">
+                      Are there any special opportunities or discounts
+                      available?
+                    </h3>
+                    <span
+                      className={`text-xl font-bold transition-transform duration-200 ${
+                        openFaqIndex === 4 ? "rotate-90" : ""
+                      }`}
+                    >
+                      ›
+                    </span>
+                  </button>
+                  {openFaqIndex === 4 && (
+                    <div className="px-6 py-4 bg-white border-t border-gray-200">
+                      <p className="text-[var(--legends-dark-black)]">
+                        Discounts available for returned missionaries who are
+                        interested in helping as mentors. We have a few spots
+                        open for drivers (over the age of 25) if interested.
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
