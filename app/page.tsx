@@ -273,7 +273,7 @@ export default function Home() {
               ABOUT THE EXPERIENCE
             </h2>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center pb-8 sm:pb-0 md:pb-0">
+            <div className="grid lg:grid-cols-2 gap-12 items-center pb-12 sm:pb-0 md:pb-0">
               <div className="text-[var(--legends-cream)]">
                 <p className="text-xl mb-6 leading-relaxed">
                   Experience the adventure of a lifetime as you trace the
@@ -297,8 +297,11 @@ export default function Home() {
               </div>
 
               {/* Gallery with actual photos */}
-              <div className="grid grid-cols-2 gap-4 pb-4 sm:pb-0 md:pb-0">
-                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square overflow-hidden">
+              <div
+                className="grid grid-cols-2 gap-4 pb-8 sm:pb-0 md:pb-0"
+                style={{ minHeight: "fit-content" }}
+              >
+                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square mb-2 sm:mb-0 md:mb-0">
                   <Image
                     src="/Legends Top 10/Picture26.png"
                     alt="Legends Road Rally experience"
@@ -307,7 +310,7 @@ export default function Home() {
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
-                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square overflow-hidden">
+                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square mb-2 sm:mb-0 md:mb-0">
                   <Image
                     src="/Legends Top 10/Picture5.png"
                     alt="Legends Road Rally experience"
@@ -316,7 +319,7 @@ export default function Home() {
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
-                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square overflow-hidden">
+                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square mb-2 sm:mb-0 md:mb-0">
                   <Image
                     src="/Legends Top 10/Picture22.png"
                     alt="Legends Road Rally experience"
@@ -325,7 +328,7 @@ export default function Home() {
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
-                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square overflow-hidden">
+                <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square mb-2 sm:mb-0 md:mb-0">
                   <Image
                     src="/Legends Top 10/IMG_8421.jpg"
                     alt="Legends Road Rally experience"

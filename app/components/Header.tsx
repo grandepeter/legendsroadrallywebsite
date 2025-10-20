@@ -95,7 +95,7 @@ export default function Header() {
 
         {/* Mobile Dropdown Menu */}
         {isDropdownOpen && (
-          <div className="md:hidden bg-gradient-to-r from-[var(--legends-black)] to-[var(--legends-light-black)] border-t border-[var(--legends-gold)] py-4">
+          <div className="md:hidden bg-gradient-to-r from-[var(--legends-black)] to-[var(--legends-light-black)] border-t border-[var(--legends-gold)] py-4 -mx-4 sm:-mx-6 lg:-mx-8">
             <nav className="flex flex-col space-y-3">
               {/* Move primary CTA to the top of the mobile list as well */}
               <a
@@ -107,14 +107,14 @@ export default function Header() {
               </a>
               <a
                 href="#about"
-                className="text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium py-2"
+                className="text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium py-2 px-4"
                 onClick={() => setIsDropdownOpen(false)}
               >
                 About
               </a>
               <a
                 href="#trip-dates"
-                className="text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium py-2"
+                className="text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium py-2 px-4"
                 onClick={() => setIsDropdownOpen(false)}
               >
                 Next Trip Dates
@@ -122,14 +122,14 @@ export default function Header() {
 
               <a
                 href="#faq"
-                className="text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium py-2"
+                className="text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium py-2 px-4"
                 onClick={() => setIsDropdownOpen(false)}
               >
                 FAQ
               </a>
               <a
                 href="#contact"
-                className="text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium py-2"
+                className="text-[var(--legends-cream)] hover:text-[var(--legends-gold)] transition-colors duration-200 font-medium py-2 px-4"
                 onClick={() => setIsDropdownOpen(false)}
               >
                 Contact Us
