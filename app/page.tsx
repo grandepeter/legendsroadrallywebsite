@@ -333,7 +333,7 @@ export default function Home() {
                 </div>
                 <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square overflow-hidden">
                   <Image
-                    src="/Legends Top 10/Picture24.png"
+                    src="/Legends Top 10/IMG_8421.jpg"
                     alt="Legends Road Rally experience"
                     width={300}
                     height={300}
