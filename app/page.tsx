@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
 
                 {/* Right side - Smaller Hero Image Carousel */}
-                <div className="max-w-3xl mx-auto lg:mx-0 w-full lg:pl-4 pb-4 sm:pb-0 md:pb-0">
+                <div className="max-w-3xl mx-auto lg:mx-0 w-full lg:pl-4 pb-8 sm:pb-0 md:pb-0">
                   <HeroCarousel
                     images={[
                       "/Legends Top 10/IMG_8420.jpg",
@@ -279,7 +279,7 @@ export default function Home() {
               ABOUT THE EXPERIENCE
             </h2>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center pb-8 sm:pb-0 md:pb-0">
               <div className="text-[var(--legends-cream)]">
                 <p className="text-xl mb-6 leading-relaxed">
                   Experience the adventure of a lifetime as you trace the
@@ -303,7 +303,7 @@ export default function Home() {
               </div>
 
               {/* Gallery with actual photos */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 pb-4 sm:pb-0 md:pb-0">
                 <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square overflow-hidden">
                   <Image
                     src="/Legends Top 10/Picture26.png"

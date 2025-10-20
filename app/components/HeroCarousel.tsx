@@ -40,7 +40,7 @@ export default function HeroCarousel({
   }, [intervalMs, safeImages.length]);
 
   return (
-    <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-2xl p-2 sm:p-3 md:p-4 aspect-square shadow-2xl overflow-hidden w-full">
+    <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-2xl p-2 sm:p-3 md:p-4 aspect-square shadow-2xl w-full mb-4 sm:mb-0 md:mb-0">
       {/*
         The inner container holds absolutely positioned images stacked on top of
         each other. We fade between them by toggling opacity. We use `Image` with
