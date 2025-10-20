@@ -197,63 +197,63 @@ export default function Home() {
               </h3>
               <ul className="space-y-3 text-[var(--legends-dark-black)]">
                 <li className="flex items-start">
-                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2 flex-shrink-0 flex-grow-0"></span>
                   <span>Day 1 – Arrive Buffalo, NY, Niagara Falls</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2 flex-shrink-0 flex-grow-0"></span>
                   <span>
                     Day 2 – Sacred Grove, Hill Cumorah, Grandin Building,
                     Whitmer Farm
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2 flex-shrink-0 flex-grow-0"></span>
                   <span>
                     Day 3 – Harmony, PA (Susquehanna) Priesthood Restoration
                     Site
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2 flex-shrink-0 flex-grow-0"></span>
                   <span>
                     Day 4 – Kirtland, OH, Whitney Store, Kirtland Temple, Hiram
                     OH: John Johnson Farm
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2 flex-shrink-0 flex-grow-0"></span>
                   <span>
                     Day 5 – Notre Dame University, City of Chicago sites (MLB
                     Game schedule pending)
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2 flex-shrink-0 flex-grow-0"></span>
                   <span>Day 6 – Travel to Nauvoo, IL</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2 flex-shrink-0 flex-grow-0"></span>
                   <span>
                     Day 7 – Nauvoo House, Nauvoo Temple, Historic Nauvoo
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2 flex-shrink-0 flex-grow-0"></span>
                   <span>
                     Day 8 – Carthage Jail, Hawn’s Mill, Adam-ondi-Ahman, Far
                     West Temple Site
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2 flex-shrink-0 flex-grow-0"></span>
                   <span>
                     Day 9 – Kansas City Temple, Independence Visitor Center,
                     Liberty Jail, World’s best Barbeque
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2"></span>
+                  <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3 mt-2 flex-shrink-0 flex-grow-0"></span>
                   <span>
                     Day 10 – Closing Ceremonies/Party – Depart Kansas City
                   </span>
