@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
 
                 {/* Right side - Smaller Hero Image Carousel */}
-                <div className="max-w-3xl mx-auto lg:mx-0 w-full lg:pl-4">
+                <div className="max-w-3xl mx-auto lg:mx-0 w-full lg:pl-4 pb-4 sm:pb-0 md:pb-0">
                   <HeroCarousel
                     images={[
                       "/Legends Top 10/IMG_8420.jpg",
