@@ -111,7 +111,7 @@ export default function Home() {
         {/* Trip Dates Section */}
         <section
           id="trip-dates"
-          className="py-16 px-4 bg-[var(--legends-cream)]"
+          className="py-16 px-4 bg-[var(--legends-cream)] scroll-mt-20"
         >
           <div className="max-w-7xl mx-auto">
             <h2
@@ -260,7 +260,7 @@ export default function Home() {
         {/* About Section */}
         <section
           id="about"
-          className="py-16 px-4 bg-gradient-to-br from-[var(--legends-black)] via-[var(--legends-light-black)] to-[var(--legends-dark-black)]"
+          className="py-16 px-4 bg-gradient-to-br from-[var(--legends-black)] via-[var(--legends-light-black)] to-[var(--legends-dark-black)] scroll-mt-20"
         >
           <div className="max-w-7xl mx-auto">
             <h2
@@ -448,7 +448,7 @@ export default function Home() {
         {/* Pricing Section */}
         <section
           id="reserve"
-          className="py-16 px-4 bg-gradient-to-r from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)]"
+          className="py-16 px-4 bg-gradient-to-r from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)] scroll-mt-20"
         >
           <div className="max-w-7xl mx-auto text-center">
             <h2
@@ -493,7 +493,10 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-16 px-4 bg-[var(--legends-cream)]">
+        <section
+          id="contact"
+          className="py-16 px-4 bg-[var(--legends-cream)] scroll-mt-20"
+        >
           <div className="max-w-7xl mx-auto">
             <h2
               className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono"
@@ -580,7 +583,7 @@ export default function Home() {
         {/* FAQ Section */}
         <section
           id="faq"
-          className="py-16 px-4 bg-gradient-to-br from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)]"
+          className="py-16 px-4 bg-gradient-to-br from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)] scroll-mt-20"
         >
           <div className="max-w-7xl mx-auto">
             <h2
