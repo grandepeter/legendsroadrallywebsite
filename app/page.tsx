@@ -36,7 +36,7 @@ export default function Home() {
       <div className="pt-8">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-black via-gray-900 to-gray-800 pt-20 pb-12 sm:pb-24 px-4">
-          <div className="max-w-7xl mx-auto sm:mx-4">
+          <div className="max-w-7xl mx-auto">
             {/* Full-width title at top */}
             <div className="text-center mb-8">
               <h1
@@ -52,11 +52,11 @@ export default function Home() {
 
             {/* Two-column layout below */}
             <div className="flex justify-center">
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] items-center gap-8 lg:gap-6 max-w-7xl">
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] items-center gap-12 lg:gap-16 max-w-6xl mx-auto">
                 {/* Left side - Main Title and Description */}
                 <div className="text-center lg:text-left lg:pr-8">
                   <p
-                    className="text-3xl lg:text-6xl font-bold text-[var(--legends-gold)] mb-6 leading-tight"
+                    className="text-3xl lg:text-6xl font-bold text-[var(--legends-gold)] mb-8 leading-tight"
                     style={{
                       fontFamily:
                         "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
@@ -68,7 +68,7 @@ export default function Home() {
                     <br />
                     YOUR LIFE!
                   </p>
-                  <p className="text-lg text-[var(--legends-cream)] mb-8 opacity-90 leading-relaxed">
+                  <p className="text-lg text-[var(--legends-cream)] mb-10 opacity-90 leading-relaxed">
                     From Niagara Falls to Sacred Grove, Kirtland Temple,
                     Chicago, Nauvoo, Carthage & Liberty Jail. Discover the
                     stories of early Saints and pioneers as you embark on an
@@ -87,7 +87,7 @@ export default function Home() {
                 </div>
 
                 {/* Right side - Smaller Hero Image Carousel */}
-                <div className="max-w-3xl mx-auto lg:mx-0 w-full lg:pl-4 pb-8 sm:pb-0 md:pb-0">
+                <div className="max-w-xl mx-auto lg:mx-0 w-full lg:pl-0 pb-8 sm:pb-0 md:pb-0">
                   <HeroCarousel
                     images={[
                       "/Legends Top 10/IMG_8420.jpg",
@@ -113,7 +113,7 @@ export default function Home() {
           id="trip-dates"
           className="py-16 px-4 bg-[var(--legends-cream)]"
         >
-          <div className="max-w-7xl mx-auto sm:mx-4">
+          <div className="max-w-7xl mx-auto">
             <h2
               className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono"
               style={{
@@ -262,7 +262,7 @@ export default function Home() {
           id="about"
           className="py-16 px-4 bg-gradient-to-br from-[var(--legends-black)] via-[var(--legends-light-black)] to-[var(--legends-dark-black)]"
         >
-          <div className="max-w-7xl mx-auto sm:mx-4">
+          <div className="max-w-7xl mx-auto">
             <h2
               className="text-4xl font-bold text-[var(--legends-gold)] mb-12 text-center font-mono"
               style={{
