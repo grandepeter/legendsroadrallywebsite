@@ -20,6 +20,53 @@ export default function Home() {
   // Only one dropdown can be open at a time (accordion behavior)
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
+  // Structured data for search engines (JSON-LD format)
+  // This helps Google understand what your business does and display rich snippets
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    name: "Legends Road Rally",
+    description:
+      "Join the ultimate 10-day church history adventure! Travel from Niagara Falls to Nauvoo with peers ages 14-25. Visit Sacred Grove, Kirtland Temple, Carthage Jail & more.",
+    url: "https://legends-road.com",
+    image: "https://legends-road.com/legendsroadlogo.PNG",
+    logo: "https://legends-road.com/legendsroadlogo.PNG",
+    telephone: "+1-703-624-1947",
+    email: "info@legends-road.com",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "US",
+    },
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Legends Road Rally Tour 1",
+        description: "10-day church history tour from Niagara Falls to Nauvoo",
+        price: "1875",
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+        validFrom: "2026-06-16",
+        validThrough: "2026-06-25",
+        category: "Youth Church History Tour",
+      },
+      {
+        "@type": "Offer",
+        name: "Legends Road Rally Tour 2",
+        description: "10-day church history tour from Niagara Falls to Nauvoo",
+        price: "1875",
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+        validFrom: "2026-07-07",
+        validThrough: "2026-07-16",
+        category: "Youth Church History Tour",
+      },
+    ],
+    touristType: "Youth (Ages 14-25)",
+    isAccessibleForFree: false,
+    publicAccess: false,
+    slogan: "10-DAY, 9-NIGHT ADVENTURE THAT WILL CHANGE YOUR LIFE!",
+  };
+
   // Function to handle FAQ dropdown clicks
   const toggleFaq = (index: number) => {
     // If clicking the same FAQ that's already open, close it
@@ -29,6 +76,15 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      {/* Structured Data for Search Engines */}
+      {/* This JSON-LD script helps Google understand your business and display rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+
       {/* Fixed Header Component */}
       <Header />
 
@@ -304,7 +360,7 @@ export default function Home() {
                 <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square mb-2 sm:mb-0 md:mb-0">
                   <Image
                     src="/Legends Top 10/Picture26.png"
-                    alt="Legends Road Rally experience"
+                    alt="LDS youth group visiting church history sites during Legends Road Rally tour"
                     width={300}
                     height={300}
                     className="w-full h-full object-cover rounded-lg"
@@ -313,7 +369,7 @@ export default function Home() {
                 <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square mb-2 sm:mb-0 md:mb-0">
                   <Image
                     src="/Legends Top 10/Picture5.png"
-                    alt="Legends Road Rally experience"
+                    alt="Young adults exploring Sacred Grove and church history sites on Legends Road Rally"
                     width={300}
                     height={300}
                     className="w-full h-full object-cover rounded-lg"
@@ -322,7 +378,7 @@ export default function Home() {
                 <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square mb-2 sm:mb-0 md:mb-0">
                   <Image
                     src="/Legends Top 10/Picture22.png"
-                    alt="Legends Road Rally experience"
+                    alt="Youth group at Kirtland Temple during church history road trip"
                     width={300}
                     height={300}
                     className="w-full h-full object-cover rounded-lg"
@@ -331,7 +387,7 @@ export default function Home() {
                 <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square mb-2 sm:mb-0 md:mb-0">
                   <Image
                     src="/Legends Top 10/IMG_8421.jpg"
-                    alt="Legends Road Rally experience"
+                    alt="LDS youth visiting Nauvoo Temple and historic sites on Legends Road Rally"
                     width={300}
                     height={300}
                     className="w-full h-full object-cover rounded-lg"
@@ -561,7 +617,7 @@ export default function Home() {
                     <div className="w-20 h-20 mx-auto mb-4 bg-[var(--legends-dark-black)] rounded-full flex items-center justify-center p-2">
                       <Image
                         src="/legendsroadlogo.PNG"
-                        alt="Legends Road Logo"
+                        alt="Legends Road Rally Logo - LDS Youth Church History Tours"
                         width={100}
                         height={100}
                         className="object-contain"
@@ -751,7 +807,7 @@ export default function Home() {
             <div className="mb-6">
               <Image
                 src="/legendsroadlogo.PNG"
-                alt="Legends Road Logo"
+                alt="Legends Road Rally Logo - LDS Youth Church History Tours"
                 width={200}
                 height={200}
                 className="object-contain mx-auto"
