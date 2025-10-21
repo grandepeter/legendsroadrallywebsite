@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     siteName: "Legends Road Rally",
     images: [
       {
-        url: "/legendsroadlogo.PNG",
+        url: "/Legends Top 10/IMG_8420.jpg",
         width: 1200,
         height: 630,
-        alt: "Legends Road Rally Logo - LDS Youth Church History Tours",
+        alt: "LDS youth group on Legends Road Rally church history tour",
       },
     ],
     locale: "en_US",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     title: "Legends Road Rally - LDS Youth Church History Tours",
     description:
       "Join the ultimate 10-day church history adventure! Travel from Niagara Falls to Nauvoo with peers ages 14-25.",
-    images: ["/legendsroadlogo.PNG"],
+    images: ["/Legends Top 10/IMG_8420.jpg"],
     creator: "@legendsroadrally",
   },
 
