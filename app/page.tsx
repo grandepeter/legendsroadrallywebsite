@@ -389,87 +389,93 @@ export default function Home() {
             </h2>
 
             <div className="bg-white rounded-2xl p-10 shadow-xl mx-4">
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Transportation */}
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--legends-dark-black)] text-3xl">
+                  <div className="w-24 h-24 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <span className="text-[var(--legends-dark-black)] text-4xl">
                       🚌
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-4">
                     Transportation
                   </h3>
-                  <p className="text-[var(--legends-dark-black)]">
+                  <p className="text-[var(--legends-dark-black)] mb-2">
                     Comfortable vehicles for the entire journey
                   </p>
                 </div>
 
+                {/* Lodging */}
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--legends-dark-black)] text-3xl">
+                  <div className="w-24 h-24 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <span className="text-[var(--legends-dark-black)] text-4xl">
                       🏠
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-4">
                     Lodging
                   </h3>
-                  <p className="text-[var(--legends-dark-black)]">
+                  <p className="text-[var(--legends-dark-black)] mb-2">
                     Quality accommodations throughout the trip
                   </p>
                 </div>
 
+                {/* All Meals & Snacks */}
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--legends-dark-black)] text-3xl">
+                  <div className="w-24 h-24 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <span className="text-[var(--legends-dark-black)] text-4xl">
                       🍽️
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-4">
                     All Meals & Snacks
                   </h3>
-                  <p className="text-[var(--legends-dark-black)]">
+                  <p className="text-[var(--legends-dark-black)] mb-2">
                     Delicious food to fuel your adventure
                   </p>
                 </div>
 
+                {/* Experienced Guides */}
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--legends-dark-black)] text-3xl">
+                  <div className="w-24 h-24 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <span className="text-[var(--legends-dark-black)] text-4xl">
                       👥
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-4">
                     Experienced Guides
                   </h3>
-                  <p className="text-[var(--legends-dark-black)]">
+                  <p className="text-[var(--legends-dark-black)] mb-2">
                     Knowledgeable leaders passionate about the journey
                   </p>
                 </div>
 
+                {/* T-Shirts */}
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--legends-dark-black)] text-3xl">
+                  <div className="w-24 h-24 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <span className="text-[var(--legends-dark-black)] text-4xl">
                       👕
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-4">
                     T-Shirts
                   </h3>
-                  <p className="text-[var(--legends-dark-black)]">
+                  <p className="text-[var(--legends-dark-black)] mb-2">
                     Commemorative gear to remember your trip
                   </p>
                 </div>
 
+                {/* Plenty of Entertainment */}
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--legends-dark-black)] text-3xl">
+                  <div className="w-24 h-24 mx-auto mb-6 bg-[var(--legends-gold)] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <span className="text-[var(--legends-dark-black)] text-4xl">
                       🎉
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-[var(--legends-dark-black)] mb-4">
                     Plenty of Entertainment
                   </h3>
-                  <p className="text-[var(--legends-dark-black)]">
+                  <p className="text-[var(--legends-dark-black)] mb-2">
                     Fun activities and games throughout
                   </p>
                 </div>
