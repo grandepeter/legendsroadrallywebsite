@@ -75,7 +75,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div id="top" className="min-h-screen">
       {/* Structured Data for Search Engines */}
       {/* This JSON-LD script helps Google understand your business and display rich snippets */}
       <script

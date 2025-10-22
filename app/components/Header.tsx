@@ -21,8 +21,12 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)] shadow-lg border-b-2 border-[var(--legends-gold)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo/Title */}
-          <div className="flex items-center gap-3">
+          {/* Logo/Title - Clickable to scroll to top */}
+          <a
+            href="#top"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-200"
+            aria-label="Scroll to top of page"
+          >
             <Image
               src="/legendsroadlogo.PNG"
               alt="Legends Road Logo"
@@ -39,7 +43,7 @@ export default function Header() {
             >
               LEGENDS ROAD LLC
             </h1>
-          </div>
+          </a>
 
           {/* Desktop Navigation - Hidden on mobile */}
           <nav className="hidden md:flex items-center space-x-8">
