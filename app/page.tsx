@@ -11,14 +11,19 @@
  */
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
-import HeroCarousel from "./components/HeroCarousel";
 
 export default function Home() {
   // State to track which FAQ dropdown is currently open
   // Only one dropdown can be open at a time (accordion behavior)
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  // State for parallax effect - tracks scroll position
+  const [scrollY, setScrollY] = useState(0);
+
+  // State to track if device is mobile (for performance optimization)
+  const [isMobile, setIsMobile] = useState(false);
 
   // Structured data for search engines (JSON-LD format)
   // This helps Google understand what your business does and display rich snippets
@@ -74,6 +79,37 @@ export default function Home() {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
 
+  // Effect to detect mobile devices and set up parallax scrolling
+  useEffect(() => {
+    // Check if device is mobile based on screen width and user agent
+    const checkMobile = () => {
+      const isMobileDevice =
+        window.innerWidth < 768 ||
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+      setIsMobile(isMobileDevice);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Only set up parallax scrolling on desktop devices for performance
+    if (!isMobile) {
+      const handleScroll = () => {
+        setScrollY(window.scrollY);
+      };
+
+      // Add scroll event listener with passive option for better performance
+      window.addEventListener("scroll", handleScroll, { passive: true });
+
+      // Cleanup function to remove event listener
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [isMobile]);
+
   return (
     <div id="top" className="min-h-screen">
       {/* Structured Data for Search Engines */}
@@ -90,75 +126,75 @@ export default function Home() {
 
       {/* Add padding to compensate for fixed header */}
       <div className="pt-8">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-black via-gray-900 to-gray-800 pt-20 pb-12 sm:pb-24 px-4">
-          <div className="max-w-7xl mx-auto">
-            {/* Full-width title at top */}
-            <div className="text-center mb-8">
-              <h1
-                className="text-[3.25rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-6 leading-none whitespace-nowrap"
+        {/* Hero Section - Full Width Background Image with Parallax */}
+        <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+          {/* Full-width background image with parallax effect */}
+          <div className="absolute inset-0 z-0">
+            <div
+              className="absolute inset-0 w-full h-[120%]"
+              style={{
+                transform: isMobile ? "none" : `translateY(${scrollY * 0.5}px)`,
+                transition: isMobile ? "none" : "transform 0.1s ease-out",
+              }}
+            >
+              <Image
+                src="/Legends Top 10/IMG_8420.jpg"
+                alt="LDS youth group on Legends Road Rally church history tour - visiting sacred sites and creating lasting memories"
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+                quality={85}
+              />
+            </div>
+            {/* Dark overlay for text readability */}
+            <div className="absolute inset-0 bg-black/50"></div>
+          </div>
+
+          {/* Content overlay */}
+          <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+            {/* Main Title */}
+            <h1
+              className="text-[3.25rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-8 leading-none"
+              style={{
+                fontFamily:
+                  "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
+              }}
+            >
+              LEGENDS ROAD RALLY
+            </h1>
+
+            {/* Tagline */}
+            <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 mb-10 max-w-5xl mx-auto">
+              <p
+                className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 leading-tight"
                 style={{
                   fontFamily:
                     "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
                 }}
               >
-                LEGENDS ROAD RALLY
-              </h1>
-            </div>
+                10-DAY, 9-NIGHT ADVENTURE
+                <br />
+                THAT WILL CHANGE
+                <br />
+                YOUR LIFE!
+              </p>
 
-            {/* Two-column layout below */}
-            <div className="flex justify-center">
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] items-center gap-12 lg:gap-16 max-w-6xl mx-auto">
-                {/* Left side - Main Title and Description */}
-                <div className="text-center lg:text-left lg:pr-8">
-                  <p
-                    className="text-3xl lg:text-6xl font-bold text-[var(--legends-gold)] mb-8 leading-tight"
-                    style={{
-                      fontFamily:
-                        "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
-                    }}
-                  >
-                    10-DAY, 9-NIGHT ADVENTURE
-                    <br />
-                    THAT WILL CHANGE
-                    <br />
-                    YOUR LIFE!
-                  </p>
-                  <p className="text-lg text-[var(--legends-cream)] mb-10 opacity-90 leading-relaxed">
-                    From Niagara Falls to Sacred Grove, Kirtland Temple,
-                    Chicago, Nauvoo, Carthage & Liberty Jail. Discover the
-                    stories of early Saints and pioneers as you embark on an
-                    unforgettable journey across America with your peers.
-                  </p>
+              <p className="text-lg sm:text-xl text-[var(--legends-cream)] mb-8 opacity-95 leading-relaxed max-w-4xl mx-auto">
+                From Niagara Falls to Sacred Grove, Kirtland Temple, Chicago,
+                Nauvoo, Carthage & Liberty Jail. Discover the stories of early
+                Saints and pioneers as you embark on an unforgettable journey
+                across America with your peers.
+              </p>
 
-                  {/* CTA Button */}
-                  <div className="flex justify-center lg:justify-start">
-                    <a
-                      href="#reserve"
-                      className="bg-[var(--legends-gold)] text-[var(--legends-dark-black)] px-8 py-4 rounded-xl font-bold text-xl hover:bg-[var(--legends-cream)] transition-all duration-300 transform hover:scale-105 shadow-lg"
-                    >
-                      RESERVE YOUR SPOT NOW!
-                    </a>
-                  </div>
-                </div>
-
-                {/* Right side - Smaller Hero Image Carousel */}
-                <div className="max-w-xl mx-auto lg:mx-0 w-full lg:pl-0 pb-8 sm:pb-0 md:pb-0">
-                  <HeroCarousel
-                    images={[
-                      "/Legends Top 10/IMG_8420.jpg",
-                      "/Legends Top 10/20250711_121806.jpg",
-                      "/Legends Top 10/20250711_222045.jpg",
-                      "/Legends Top 10/20250712_130022.jpg",
-                      "/Legends Top 10/20250715_110605.jpg",
-                      "/Legends Top 10/IMG_8421.jpg",
-                      "/Legends Top 10/IMG_3479.JPG",
-                      "/Legends Top 10/IMG_8418.jpg",
-                      "/Legends Top 10/20250711_205955.jpg",
-                      "/Legends Top 10/IMG_8419.jpg",
-                    ]}
-                  />
-                </div>
+              {/* CTA Button */}
+              <div className="flex justify-center">
+                <a
+                  href="#reserve"
+                  className="bg-[var(--legends-gold)] text-[var(--legends-dark-black)] px-8 py-4 rounded-xl font-bold text-xl hover:bg-[var(--legends-cream)] transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  RESERVE YOUR SPOT NOW!
+                </a>
               </div>
             </div>
           </div>
@@ -213,7 +249,7 @@ export default function Home() {
               {/* Tour 2 */}
               <div className="bg-white rounded-2xl p-8 shadow-xl border-4 border-[var(--legends-gold)]">
                 <h3 className="text-2xl font-bold text-[var(--legends-dark-black)] mb-4 font-mono">
-                  TOUR 2: JULY_7-16, 2026
+                  TOUR 2: JULY 7-16, 2026
                 </h3>
                 <ul className="space-y-3 text-[var(--legends-dark-black)]">
                   <li className="flex items-center">
