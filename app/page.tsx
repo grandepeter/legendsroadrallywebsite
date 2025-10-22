@@ -333,6 +333,8 @@ export default function Home() {
                     width={300}
                     height={300}
                     className="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
                   />
                 </div>
                 <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square mb-2 sm:mb-0 md:mb-0">
@@ -342,6 +344,8 @@ export default function Home() {
                     width={300}
                     height={300}
                     className="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
                   />
                 </div>
                 <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square mb-2 sm:mb-0 md:mb-0">
@@ -351,6 +355,8 @@ export default function Home() {
                     width={300}
                     height={300}
                     className="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
                   />
                 </div>
                 <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square mb-2 sm:mb-0 md:mb-0">
@@ -360,6 +366,8 @@ export default function Home() {
                     width={300}
                     height={300}
                     className="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
                   />
                 </div>
               </div>
