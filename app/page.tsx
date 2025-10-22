@@ -489,31 +489,93 @@ export default function Home() {
           id="reserve"
           className="py-16 px-4 bg-gradient-to-r from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)] scroll-mt-20"
         >
-          <div className="max-w-7xl mx-auto text-center">
+          <div className="max-w-7xl mx-auto">
             <h2
-              className="text-4xl font-bold text-[var(--legends-gold)] mb-8 font-mono"
+              className="text-4xl font-bold text-[var(--legends-gold)] mb-12 text-center font-mono"
               style={{
                 fontFamily:
                   "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
               }}
             >
-              PRICE
+              PRICING & RESERVATIONS
             </h2>
 
-            <div className="mb-12">
-              <div className="text-8xl font-bold text-[var(--legends-cream)] mb-4">
-                $1,875
-              </div>
-              <div className="text-xl text-[var(--legends-cream)] opacity-80">
-                AIRFARE NOT INCLUDED
-              </div>
-              <div className="text-2xl font-bold text-[var(--legends-gold)] mt-6">
-                $1,675 for returned missionaries who wish to help out as
-                mentors.
+            {/* Pricing Table */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl mb-12">
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Regular Pricing */}
+                <a href="#contact" className="block">
+                  <div className="bg-[var(--legends-gold)] rounded-xl p-6 text-center flex flex-col justify-center hover:bg-[var(--legends-cream)] hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer">
+                    <h3 className="text-2xl font-bold text-[var(--legends-dark-black)] mb-4">
+                      REGULAR PRICING
+                    </h3>
+                    <div className="text-5xl font-bold text-[var(--legends-dark-black)] mb-4">
+                      $1,875
+                    </div>
+                    <div className="text-lg text-[var(--legends-dark-black)] opacity-80 mb-6">
+                      Ages 14-25
+                    </div>
+                    <div className="space-y-2 text-[var(--legends-dark-black)] text-left">
+                      <div className="flex items-center">
+                        <span className="w-3 h-3 bg-[var(--legends-dark-black)] rounded-full mr-3"></span>
+                        Transportation & lodging
+                      </div>
+                      <div className="flex items-center">
+                        <span className="w-3 h-3 bg-[var(--legends-dark-black)] rounded-full mr-3"></span>
+                        All meals & snacks
+                      </div>
+                      <div className="flex items-center">
+                        <span className="w-3 h-3 bg-[var(--legends-dark-black)] rounded-full mr-3"></span>
+                        Experienced guides
+                      </div>
+                      <div className="flex items-center">
+                        <span className="w-3 h-3 bg-[var(--legends-dark-black)] rounded-full mr-3"></span>
+                        T-shirts & entertainment
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                {/* Returned Missionary Pricing */}
+                <a href="#contact" className="block group">
+                  <div className="bg-gradient-to-br from-[var(--legends-dark-black)] to-[var(--legends-black)] rounded-xl p-6 text-center flex flex-col justify-center hover:!bg-[var(--legends-cream)] hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer">
+                    <h3 className="text-2xl font-bold text-[var(--legends-gold)] mb-4">
+                      RETURNED MISSIONARY MENTOR
+                    </h3>
+                    <div className="text-5xl font-bold text-[var(--legends-cream)] mb-4">
+                      $1,675
+                    </div>
+                    <div className="text-lg text-[var(--legends-cream)] opacity-80 mb-6">
+                      Help as a mentor
+                    </div>
+                    <div className="space-y-2 text-[var(--legends-cream)] text-left">
+                      <div className="flex items-center">
+                        <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3"></span>
+                        Transportation & lodging
+                      </div>
+                      <div className="flex items-center">
+                        <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3"></span>
+                        All meals & snacks
+                      </div>
+                      <div className="flex items-center">
+                        <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3"></span>
+                        Experienced guides
+                      </div>
+                      <div className="flex items-center">
+                        <span className="w-3 h-3 bg-[var(--legends-gold)] rounded-full mr-3"></span>
+                        T-shirts & entertainment
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
 
-            <div className="mb-12">
+            {/* Call to Action */}
+            <div className="text-center">
+              <div className="text-xl text-[var(--legends-cream)] opacity-80 mb-8">
+                AIRFARE NOT INCLUDED
+              </div>
               <div className="text-2xl font-bold text-[var(--legends-gold)] mb-6">
                 RESERVE YOUR SPOT NOW!
               </div>
