@@ -26,6 +26,38 @@ export default function Home() {
   // State to track if device is mobile (for performance optimization)
   const [isMobile, setIsMobile] = useState(false);
 
+  // State for image carousel
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Array of images for the carousel (rearranged order)
+  const carouselImages = [
+    "/Legends Top 10/IMG_8421.jpg", // 6th photo becomes 1st
+    "/Legends Top 10/20250711_121806.jpg", // Last photo becomes 2nd
+    "/Legends Top 10/20250711_222045.jpg", // 4th photo becomes 3rd
+    "/Legends Top 10/IMG_8420.jpg", // Last photo becomes 4th
+    "/Legends Top 10/Picture5.png",
+    "/Legends Top 10/Picture22.png",
+    "/Legends Top 10/20250711_205955.jpg", // 4th photo becomes 7th
+    "/Legends Top 10/Picture26.png",
+    "/Legends Top 10/IMG_3479.JPG", // 4th photo becomes last
+  ];
+
+  // Function to navigate carousel images
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
+    );
+  };
+
+  // Function to go to specific image
+  const goToImage = (index: number) => {
+    setCurrentImageIndex(index);
+  };
+
   // Structured data for search engines (JSON-LD format)
   // This helps Google understand what your business does and display rich snippets
   const structuredData = {
@@ -110,6 +142,15 @@ export default function Home() {
       };
     }
   }, [isMobile]);
+
+  // Effect for auto-rotating carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
 
   return (
     <div id="top" className="min-h-screen">
@@ -839,6 +880,136 @@ export default function Home() {
                       </p>
                     </div>
                   )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section
+          id="testimonials"
+          className="py-16 px-4 bg-[var(--legends-cream)] scroll-mt-20"
+        >
+          <div className="max-w-7xl mx-auto">
+            <h2
+              className="text-4xl font-bold text-[var(--legends-dark-black)] mb-12 text-center font-mono"
+              style={{
+                fontFamily:
+                  "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
+              }}
+            >
+              TESTIMONIALS
+            </h2>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Testimonials */}
+              <div className="space-y-8">
+                {/* Testimonial 1 */}
+                <div className="bg-white rounded-2xl p-8 shadow-lg">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-[var(--legends-gold)] rounded-full flex items-center justify-center mr-4">
+                      <span className="text-[var(--legends-dark-black)] text-xl font-bold">
+                        S
+                      </span>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-[var(--legends-dark-black)]">
+                        Sarah M.
+                      </h4>
+                      <p className="text-sm text-[var(--legends-dark-black)] opacity-70">
+                        Age 18, Utah
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-[var(--legends-dark-black)] italic leading-relaxed">
+                    "This trip completely changed my perspective on church
+                    history. Standing in the Sacred Grove was a spiritual
+                    experience I'll never forget. The friendships I made with
+                    other youth from across the country are still strong today!"
+                  </p>
+                </div>
+
+                {/* Testimonial 2 */}
+                <div className="bg-white rounded-2xl p-8 shadow-lg">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-[var(--legends-gold)] rounded-full flex items-center justify-center mr-4">
+                      <span className="text-[var(--legends-dark-black)] text-xl font-bold">
+                        J
+                      </span>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-[var(--legends-dark-black)]">
+                        Jacob T.
+                      </h4>
+                      <p className="text-sm text-[var(--legends-dark-black)] opacity-70">
+                        Age 20, California
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-[var(--legends-dark-black)] italic leading-relaxed">
+                    "As a returned missionary mentor, I loved helping the
+                    younger participants connect with these sacred sites. The
+                    guides were incredible, and seeing the youth's testimonies
+                    grow stronger each day was amazing."
+                  </p>
+                </div>
+
+                {/* Testimonial 3 */}
+                <div className="bg-white rounded-2xl p-8 shadow-lg">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-[var(--legends-gold)] rounded-full flex items-center justify-center mr-4">
+                      <span className="text-[var(--legends-dark-black)] text-xl font-bold">
+                        E
+                      </span>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-[var(--legends-dark-black)]">
+                        Emma K.
+                      </h4>
+                      <p className="text-sm text-[var(--legends-dark-black)] opacity-70">
+                        Age 16, Idaho
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-[var(--legends-dark-black)] italic leading-relaxed">
+                    "I was nervous about traveling with people I didn't know,
+                    but by day two we were like family. The Kirtland Temple
+                    visit was incredible, and I learned so much about the early
+                    Saints' sacrifices."
+                  </p>
+                </div>
+              </div>
+
+              {/* Photo Carousel */}
+              <div className="bg-white rounded-2xl p-4 shadow-lg">
+                {/* Single Image Display */}
+                <div className="relative">
+                  <div className="bg-gradient-to-r from-[var(--legends-gold)] to-[var(--legends-cream)] rounded-xl p-2 aspect-square">
+                    <Image
+                      src={carouselImages[currentImageIndex]}
+                      alt={`Legends Road Rally memory ${currentImageIndex + 1}`}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover rounded-lg"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  {/* Circular Indicators - Overlaid on bottom of image */}
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    {carouselImages.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => goToImage(index)}
+                        className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                          index === currentImageIndex
+                            ? "bg-white"
+                            : "bg-[var(--legends-gold)] hover:bg-[var(--legends-cream)]"
+                        }`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
