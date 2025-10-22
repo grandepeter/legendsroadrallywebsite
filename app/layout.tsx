@@ -2,15 +2,23 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { brice } from "./fonts";
+import AOSProvider from "./components/AOSProvider";
+import Script from "next/script";
+import PerformanceMonitor from "./components/PerformanceMonitor";
 
+// Optimize font loading with display swap for better performance
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap", // Improves loading performance
+  preload: true, // Preload critical fonts
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap", // Improves loading performance
+  preload: true, // Preload critical fonts
 });
 
 export const metadata: Metadata = {
@@ -108,10 +116,136 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={brice.variable}>
+      <head>
+        {/* Preload critical resources for faster loading */}
+        <link
+          rel="preload"
+          href="/fonts/brice-black-condensed.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
+        {/* Preconnect to external domains for faster resource loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+
+        {/* DNS prefetch for external resources */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+        {/* Critical CSS inline for above-the-fold content */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              /* Critical CSS for immediate rendering */
+              body { margin: 0; font-family: var(--font-geist-sans), system-ui, sans-serif; }
+              .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+              /* Prevent layout shift during font loading */
+              .font-loading { visibility: hidden; }
+              .font-loaded { visibility: visible; }
+            `,
+          }}
+        />
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* Critical content loads immediately */}
+        <AOSProvider>{children}</AOSProvider>
+
+        {/* Performance monitoring component */}
+        <PerformanceMonitor />
+
+        {/* Defer non-critical scripts to improve initial page load */}
+        <Script
+          id="performance-monitoring"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Performance monitoring script (deferred)
+              if (typeof window !== 'undefined' && 'performance' in window) {
+                window.addEventListener('load', function() {
+                  // Measure Core Web Vitals
+                  const navigation = performance.getEntriesByType('navigation')[0];
+                  const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+                  
+                  // Log performance metrics (only in development)
+                  if (process.env.NODE_ENV === 'development') {
+                    console.log('Page Load Time:', loadTime + 'ms');
+                    console.log('DOM Content Loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart + 'ms');
+                  }
+                  
+                  // Send to analytics in production (implement as needed)
+                  if (process.env.NODE_ENV === 'production' && loadTime > 3000) {
+                    // Alert if page takes longer than 3 seconds
+                    console.warn('Page load time exceeded 3 seconds:', loadTime + 'ms');
+                  }
+                });
+              }
+            `,
+          }}
+        />
+
+        {/* Defer AOS initialization until after page load */}
+        <Script
+          id="aos-deferred-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Defer AOS initialization for better performance
+              if (typeof window !== 'undefined') {
+                // Wait for page to be fully loaded before initializing AOS
+                if (document.readyState === 'complete') {
+                  // AOS will be initialized by AOSProvider component
+                } else {
+                  window.addEventListener('load', function() {
+                    // Small delay to ensure smooth animations
+                    setTimeout(function() {
+                      if (window.AOS) {
+                        window.AOS.refresh();
+                      }
+                    }, 100);
+                  });
+                }
+              }
+            `,
+          }}
+        />
+
+        {/* Resource hints for better performance */}
+        <Script
+          id="resource-hints"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Preload next likely resources after page load
+              if (typeof window !== 'undefined') {
+                window.addEventListener('load', function() {
+                  // Preload images that are likely to be viewed next
+                  const imageUrls = [
+                    '/Legends Top 10/IMG_8421.jpg',
+                    '/Legends Top 10/20250711_121806.jpg',
+                    '/Legends Top 10/20250711_222045.jpg'
+                  ];
+                  
+                  imageUrls.forEach(function(url) {
+                    const link = document.createElement('link');
+                    link.rel = 'preload';
+                    link.as = 'image';
+                    link.href = url;
+                    document.head.appendChild(link);
+                  });
+                });
+              }
+            `,
+          }}
+        />
       </body>
     </html>
   );

@@ -18,7 +18,12 @@ export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)] shadow-lg border-b-2 border-[var(--legends-gold)]">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[var(--legends-dark-black)] via-[var(--legends-black)] to-[var(--legends-light-black)] shadow-lg border-b-2 border-[var(--legends-gold)]"
+      data-aos="fade-down"
+      data-aos-duration="600"
+      data-aos-delay="100"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Title - Clickable to scroll to top */}
@@ -26,6 +31,9 @@ export default function Header() {
             href="#top"
             className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-200"
             aria-label="Scroll to top of page"
+            data-aos="fade-right"
+            data-aos-duration="600"
+            data-aos-delay="200"
           >
             <Image
               src="/legendsroadlogo.PNG"
@@ -46,7 +54,12 @@ export default function Header() {
           </a>
 
           {/* Desktop Navigation - Hidden on mobile */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav
+            className="hidden md:flex items-center space-x-8"
+            data-aos="fade-left"
+            data-aos-duration="600"
+            data-aos-delay="300"
+          >
             {/* Move primary CTA to the beginning and vertically center all items */}
             <a
               href="#reserve"
@@ -82,7 +95,12 @@ export default function Header() {
           </nav>
 
           {/* Mobile Dropdown Button */}
-          <div className="md:hidden">
+          <div
+            className="md:hidden"
+            data-aos="fade-left"
+            data-aos-duration="600"
+            data-aos-delay="300"
+          >
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               aria-label={isDropdownOpen ? "Close menu" : "Open menu"}

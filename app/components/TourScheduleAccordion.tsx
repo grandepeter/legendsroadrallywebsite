@@ -411,7 +411,12 @@ export default function TourScheduleAccordion() {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-xl border-4 border-[var(--legends-gold)]">
+    <div
+      className="bg-white rounded-2xl p-8 shadow-xl border-4 border-[var(--legends-gold)]"
+      data-aos="fade-up"
+      data-aos-duration="600"
+      data-aos-delay="600"
+    >
       <h3 className="text-2xl font-bold text-[var(--legends-dark-black)] mb-6 font-mono">
         TOUR SCHEDULE
       </h3>
@@ -424,7 +429,13 @@ export default function TourScheduleAccordion() {
         {/* Day items */}
         <div className="space-y-4">
           {tourScheduleData.map((day, index) => (
-            <div key={day.day} className="relative">
+            <div
+              key={day.day}
+              className="relative"
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay={700 + index * 100}
+            >
               {/* Timeline dot */}
               <div className="absolute left-5 w-3 h-3 bg-[var(--legends-gold)] rounded-full border-2 border-white shadow-lg z-10"></div>
 
@@ -529,9 +540,9 @@ export default function TourScheduleAccordion() {
                             {/* Activities list */}
                             {location.activities && (
                               <div className="mb-3">
-                                <h7 className="font-semibold text-[var(--legends-dark-black)] text-sm mb-2 block">
+                                <h6 className="font-semibold text-[var(--legends-dark-black)] text-sm mb-2 block">
                                   Activities:
-                                </h7>
+                                </h6>
                                 <ul className="space-y-1">
                                   {location.activities.map(
                                     (activity, activityIndex) => (

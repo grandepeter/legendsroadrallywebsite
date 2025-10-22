@@ -42,16 +42,16 @@ export default function Home() {
     "/Legends Top 10/IMG_3479.JPG", // 4th photo becomes last
   ];
 
-  // Function to navigate carousel images
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
-  };
+  // Function to navigate carousel images (currently unused but kept for future functionality)
+  // const nextImage = () => {
+  //   setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+  // };
 
-  const prevImage = () => {
-    setCurrentImageIndex(
-      (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
-    );
-  };
+  // const prevImage = () => {
+  //   setCurrentImageIndex(
+  //     (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
+  //   );
+  // };
 
   // Function to go to specific image
   const goToImage = (index: number) => {
@@ -186,7 +186,9 @@ export default function Home() {
                 priority
                 sizes="100vw"
                 className="object-cover"
-                quality={85}
+                quality={90}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
               />
             </div>
             {/* Dark overlay for text readability */}
@@ -202,12 +204,22 @@ export default function Home() {
                 fontFamily:
                   "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
               }}
+              data-aos="fade-up"
+              data-aos-duration="1200"
+              data-aos-delay="200"
+              data-aos-easing="ease-out-quart"
             >
               LEGENDS ROAD RALLY
             </h1>
 
             {/* Tagline */}
-            <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 mb-10 max-w-5xl mx-auto">
+            <div
+              className="bg-black/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 mb-10 max-w-5xl mx-auto"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+              data-aos-easing="ease-out-quart"
+            >
               <p
                 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 leading-tight"
                 style={{
@@ -234,6 +246,10 @@ export default function Home() {
                 <a
                   href="#reserve"
                   className="bg-[var(--legends-gold)] text-[var(--legends-dark-black)] px-8 py-4 rounded-xl font-bold text-xl hover:bg-[var(--legends-cream)] transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  data-aos="zoom-in"
+                  data-aos-duration="800"
+                  data-aos-delay="800"
+                  data-aos-easing="ease-out-back"
                 >
                   RESERVE YOUR SPOT NOW!
                 </a>
@@ -254,13 +270,20 @@ export default function Home() {
                 fontFamily:
                   "var(--font-brice), ui-sans-serif, system-ui, -apple-system",
               }}
+              data-aos="fade-up"
+              data-aos-duration="600"
             >
               NEXT TRIP DATES
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Tour 1 */}
-              <div className="bg-white rounded-2xl p-8 shadow-xl border-4 border-[var(--legends-gold)]">
+              <div
+                className="bg-white rounded-2xl p-8 shadow-xl border-4 border-[var(--legends-gold)]"
+                data-aos="fade-right"
+                data-aos-duration="600"
+                data-aos-delay="200"
+              >
                 <h3 className="text-2xl font-bold text-[var(--legends-dark-black)] mb-4 font-mono">
                   TOUR 1: JUNE 16-25, 2026
                 </h3>
@@ -289,7 +312,12 @@ export default function Home() {
               </div>
 
               {/* Tour 2 */}
-              <div className="bg-white rounded-2xl p-8 shadow-xl border-4 border-[var(--legends-gold)]">
+              <div
+                className="bg-white rounded-2xl p-8 shadow-xl border-4 border-[var(--legends-gold)]"
+                data-aos="fade-left"
+                data-aos-duration="600"
+                data-aos-delay="400"
+              >
                 <h3 className="text-2xl font-bold text-[var(--legends-dark-black)] mb-4 font-mono">
                   TOUR 2: JULY 7-16, 2026
                 </h3>
@@ -923,10 +951,11 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-[var(--legends-dark-black)] italic leading-relaxed">
-                    "This trip completely changed my perspective on church
+                    &ldquo;This trip completely changed my perspective on church
                     history. Standing in the Sacred Grove was a spiritual
-                    experience I'll never forget. The friendships I made with
-                    other youth from across the country are still strong today!"
+                    experience I&apos;ll never forget. The friendships I made
+                    with other youth from across the country are still strong
+                    today!&rdquo;
                   </p>
                 </div>
 
@@ -948,10 +977,10 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-[var(--legends-dark-black)] italic leading-relaxed">
-                    "As a returned missionary mentor, I loved helping the
+                    &ldquo;As a returned missionary mentor, I loved helping the
                     younger participants connect with these sacred sites. The
-                    guides were incredible, and seeing the youth's testimonies
-                    grow stronger each day was amazing."
+                    guides were incredible, and seeing the youth&apos;s
+                    testimonies grow stronger each day was amazing.&rdquo;
                   </p>
                 </div>
 
@@ -973,10 +1002,10 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-[var(--legends-dark-black)] italic leading-relaxed">
-                    "I was nervous about traveling with people I didn't know,
-                    but by day two we were like family. The Kirtland Temple
-                    visit was incredible, and I learned so much about the early
-                    Saints' sacrifices."
+                    &ldquo;I was nervous about traveling with people I
+                    didn&apos;t know, but by day two we were like family. The
+                    Kirtland Temple visit was incredible, and I learned so much
+                    about the early Saints&apos; sacrifices.&rdquo;
                   </p>
                 </div>
               </div>
